@@ -9,7 +9,8 @@
 **.会议标题**
   
   会议标题主要是显示会议的名称，也可以显示会议举办的时间和地点。例如：
-  ![title](https://github.com/SJJ0330/MeetConf/readmeImg/title.PNG)
   
-  ![title](https://github.com/SJJ0330/MeetConf/readmeImg/title2.PNG)
+  ![title](https://sjj0330.github.io/MeetConf/readmeImg/title.PNG)
+  
+  ![title](https://sjj0330.github.io/MeetConf/readmeImg/title2.PNG)
   

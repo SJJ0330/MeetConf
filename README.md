@@ -26,43 +26,43 @@
   
   会议信息部分一般包含会议举办的时间、地点以及演讲者等。
   
-  ![title](https://sjj0330.github.io/MeetConf/readmeImg/info.PNG)
+  ![info](https://sjj0330.github.io/MeetConf/readmeImg/info.PNG)
   
-  ![title](https://sjj0330.github.io/MeetConf/readmeImg/info3.PNG)
+  ![info](https://sjj0330.github.io/MeetConf/readmeImg/info3.PNG)
   
 **会议日程**
   
   会议日程部分主要用来展示会议的详细进程。内容包括会议总共进行的天数以及每一天的日程安排。会议日程的展示方式有两种，——种是按照日期展示，另一种在此基础上添加了不同的分会场。
   
-  ![title](https://sjj0330.github.io/MeetConf/readmeImg/agenda.PNG)
+  ![agenda](https://sjj0330.github.io/MeetConf/readmeImg/agenda.PNG)
   
-  ![title](https://sjj0330.github.io/MeetConf/readmeImg/agenda3.PNG)
+  ![agenda](https://sjj0330.github.io/MeetConf/readmeImg/agenda3.PNG)
   
 **会议新闻**
 
   会议新闻部分主要展示与会议相关的新闻、公告等信息。
   
-  ![title](https://sjj0330.github.io/MeetConf/readmeImg/news2.PNG)
+  ![news](https://sjj0330.github.io/MeetConf/readmeImg/news2.PNG)
   
 **演讲嘉宾**
 
   演讲嘉宾部分主要展示参加会议的发言人的相关信息。
   
-  ![title](https://sjj0330.github.io/MeetConf/readmeImg/speakers.PNG)
+  ![speakers](https://sjj0330.github.io/MeetConf/readmeImg/speakers.PNG)
   
-  ![title](https://sjj0330.github.io/MeetConf/readmeImg/speakers2.PNG)
+  ![speakers](https://sjj0330.github.io/MeetConf/readmeImg/speakers2.PNG)
   
 **赞助商**
 
   赞助商部分主要用来展示与会议相关的赞助商的logo信息。
   
-  ![title](https://sjj0330.github.io/MeetConf/readmeImg/sponsor.PNG)
+  ![sponsor](https://sjj0330.github.io/MeetConf/readmeImg/sponsor.PNG)
   
 **地图**
 
   地图部分主要展示会议的举办地点的位置信息。
   
-  ![title](https://sjj0330.github.io/MeetConf/readmeImg/.PNG)
+  ![map](https://sjj0330.github.io/MeetConf/readmeImg/map.PNG)
   
 
 

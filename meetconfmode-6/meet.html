@@ -1,0 +1,1592 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/iconfont.css">
+    <link rel="stylesheet" href="css/icons.css">
+    <link rel="stylesheet" href="css/meet.css">
+
+    <title>meetconf</title>
+
+    <script src="js/jquery-3.2.1.js"></script>
+    <!--让主流浏览器都支持HTML5标签-->
+    <script src="js/html5media.min.js"></script>
+
+    <script src="js/bootstrap.js"></script>
+    <!--导航滚动定位-->
+    <script src="js/jquery.nav.js"></script>
+
+    <script src="js/meeting.js"></script>
+
+
+    <!--百度地图API-->
+    <!-- 密匙6lbr4qZ7nKyPo4bwGFguvFnbr4WTbgWt -->
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=3.0&ak=6lbr4qZ7nKyPo4bwGFguvFnbr4WTbgWt"></script>
+    <script src='https://api.map.baidu.com/library/SearchInfoWindow/1.5/src/SearchInfoWindow_min.js' type='text/javascript'></script>
+    <link href='https://api.map.baidu.com/library/SearchInfoWindow/1.5/src/SearchInfoWindow_min.css' rel='stylesheet'>
+
+</head>
+
+<body>
+<div class="container-fluid nav ">
+    <nav class="row text-center">
+        <div class="menu menu-h" id="navbar" role="navigation">
+            <div class="container top-container">
+                <div class="keynote  col-lg-4 col-lg-offset-1 col-md-offset-1 col-md-4 col-sm-offset-1 col-sm-4 text-left">NJU Meeting</div>
+                <div class=" col-lg-7 col-md-7 col-sm-7">
+                    <ul class="pull-right" id="menu-h" role="tablist">
+                        <li class="col-lg-1 col-md-1 col-sm-1 ">
+                            <a class="menu-a menu-h-a active" href="#meetInfo">会议
+                                <span class="red-block"></span>
+                            </a>
+                        </li>
+                        <li class="col-lg-1 col-md-1 col-sm-1"><a class="menu-a menu-h-a" href="#agenda">日程
+                            <span class="red-block "></span>
+                        </a></li>
+                        <li class="col-lg-1 col-md-1 col-sm-1"><a class="menu-a menu-h-a" href="#news">新闻
+                            <span class="red-block "></span>
+                        </a></li>
+                        <li class="col-lg-1 col-md-1 col-sm-1"><a class="menu-a menu-h-a" href="#guest">嘉宾
+                            <span class="red-block "></span>
+                        </a></li>
+                        <li class="col-lg-1 col-md-1 col-sm-1"><a class="menu-a menu-h-a" href="#sponsor">赞助商
+                            <span class="red-block"></span>
+                        </a></li>
+                        <li class="col-lg-1 col-md-1 col-sm-1"><a class="menu-a menu-h-a" href="#map-container">地图
+                            <span class="red-block "></span>
+                        </a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="menu menu-v pull-right"  role="navigation">
+            <i class="glyphicon glyphicon-menu-hamburger nav-all pull-right" aria-hidden="true">
+            </i>
+        </div>
+    </nav>
+</div>
+<ul class="menu-v-height" id="menu-v">
+    <li><a class="menu-a menu-v-a" href="#meetInfo">会议</a></li>
+    <li><a class="menu-a menu-v-a" href="#agenda">日程</a></li>
+    <li><a class="menu-a menu-v-a" href="#guest">嘉宾</a></li>
+    <li><a class="menu-a menu-v-a" href="#qualification">会务组</a>
+    <li><a class="menu-a menu-v-a" href="#location">位置</a>
+    <li><a class="menu-a menu-v-a" href="#map-container">地图</a></li>
+</ul>
+
+<div class="bg-container">
+    <div class="container-fluid top nav-doc" id="meetInfo">
+        <div class="container">
+            <div class="row">
+                <div class="top-wrapper col-lg-10 col-md-10  col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1">
+                    <div class="meetInfo">
+                        <span class="meetTitle">南京大学</span>
+                        <span class="meetDes">会议</span>
+                        <div class="meetDet">
+                            <span>
+                                <span class="number">2019</span>
+                                年&nbsp;<span class="number">5</span>
+                                月&nbsp;<span class="number">23</span>
+                                日<span class="slash slash1">/</span>
+                            </span>
+                            <span>南京大学仙林校区<span class="slash">/</span></span>
+                            <span><span class="number">8</span>&nbsp;位演讲者</span>
+                        </div>
+                        <div class="meetBtn" id="meetBtn"><a class="meetBtn-a" href="#">立即注册</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 会议流程 添加分会场 -->
+<div class="container-fluid agenda nav-doc" id="agenda">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 ">
+                <span class="row-title col-lg-12 col-md-12 col-sm-12 col-xs-12">日程</span>
+            </div>
+            <div class="row-content agenda-wrapper col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                
+
+                <div class="resp-tabs">
+                    <ul class="resp-tabs-list">
+                        <li class="resp-tabs-item today" data-a="day-1">
+                            <h4>第一分会场</h4>
+                        </li>
+                        <li class="resp-tabs-item" data-a="day-2">
+                            <h4>第二分会场</h4>
+                        </li>
+                        <li class="resp-tabs-item" data-a="day-3">
+                            <h4>第三分会场</h4>
+                        </li>
+                        <li class="resp-tabs-item" data-a="day-4">
+                            <h4>第四分会场</h4>
+                        </li>
+                        <li class="resp-tabs-item" data-a="day-5">
+                            <h4>第五分会场</h4>
+                        </li>
+                    </ul>
+                </div>
+
+
+                <div class="agenda-day-content" data-b="day-1">
+                    <div class="sub-resp-tabs">
+                        <ul class="sub-resp-tabs-list">
+                            <li class="sub-resp-tabs-item sub-active" data-c="time-1">
+                                <h4 class="time-1">2019年5月23日</h4>
+                            </li>
+                            <li class="sub-resp-tabs-item" data-c="time-2">
+                                <h4 class="time-1">2019年5月24日</h4>
+                            </li>
+                            <li class="sub-resp-tabs-item" data-c="time-3">
+                                <h4 class="time-1">2019年5月25日</h4>
+                            </li>
+                            
+                        </ul>
+                    </div>
+                    <div class="agenda-content-wrapper" data-d="time-1">
+                        <div class="agenda-content col-lg-12 col-md-12 col-sm-12 col-xs-12 ">
+                            <div class="agenda-sec-content" data-toggle="modal" data-target="#agendaModal1">
+                                <img src="img/a1.jpg" />
+                                <div class="agenda-span">
+                                    <span class="agenda-title">智能机器人发布会</span>
+                                    <div class="agenda-detail">
+                                        <span class="agenda-date">
+                                            <i class="iconfont text-center aside-menu-icon">&#xe6b5;</i>09:00-10:00</span>
+                                        <span class="agenda-address">
+                                            <i class="iconfont text-center aside-menu-icon">&#xe62a;</i>杜厦图书馆二楼大厅</span>
+                                        <span class="agenda-des">
+                                            <i class="iconfont text-center aside-menu-icon">&#xe61b;</i>智能图书馆机器人发布与揭幕</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="agenda-content col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="agenda-sec-content" data-toggle="modal" data-target="#agendaModal2">
+                                <img src="img/a2.jpg" />
+                                <div class="agenda-span">
+                                    <span class="agenda-title">交流与研讨</span>
+                                    <div class="agenda-detail">
+                                        <span class="agenda-date">
+                                            <i class="iconfont text-center aside-menu-icon">&#xe6b5;</i>10:00-12:00</span>
+                                        <span class="agenda-address">
+                                            <i class="iconfont text-center aside-menu-icon">&#xe62a;</i>杜厦图书馆报告厅</span>
+                                        <span class="agenda-des">
+                                            <i class="iconfont text-center aside-menu-icon">&#xe61b;</i>智慧图书馆技术交流研讨</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="agenda-content col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="agenda-sec-content" style="cursor: default;">
+                                <span class="agenda-break">
+                                    <span class="agenda-time">
+                                        <i class="iconfont text-center aside-menu-icon">&#xe6b5;</i>12:00-13:00</span>
+                                    <span>
+                                        <span class="agenda-break-sec">
+                                            <i class="iconfont text-center aside-menu-icon">&#xe61b;</i>INTERMISSION</span>
+                                        <span class="agenda-break-sec">&</span>
+                                        <span class="agenda-break-sec">LUNCHBREAK</span>
+                                    </span>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="agenda-content col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="agenda-sec-content" data-toggle="modal" data-target="#agendaModal3">
+                                <img src="img/a3.jpg" />
+                                <div class="agenda-span">
+                                    <span class="agenda-title">CADAL交流</span>
+                                    <div class="agenda-detail">
+                                        <span class="agenda-date">
+                                            <i class="iconfont text-center aside-menu-icon">&#xe6b5;</i>13:30-16:00</span>
+                                        <span class="agenda-address">
+                                            <i class="iconfont text-center aside-menu-icon">&#xe62a;</i>杜厦图书馆报告厅</span>
+                                        <span class="agenda-des">
+                                            <i class="iconfont text-center aside-menu-icon">&#xe61b;</i>CADAL服务与技术交流（报告厅）；盘点机器人现场交流（外文阅览室）</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="agenda-content col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="agenda-sec-content" data-toggle="modal" data-target="#agendaModal4">
+                                <img src="img/a4.jpg" />
+                                <div class="agenda-span">
+                                    <span class="agenda-title">交流与研讨</span>
+                                    <div class="agenda-detail">
+                                        <span class="agenda-date">
+                                            <i class="iconfont text-center aside-menu-icon">&#xe6b5;</i>10:00-12:00</span>
+                                        <span class="agenda-address">
+                                            <i class="iconfont text-center aside-menu-icon">&#xe62a;</i>杜厦图书馆报告厅</span>
+                                        <span class="agenda-des">
+                                            <i class="iconfont text-center aside-menu-icon">&#xe61b;</i>智慧图书馆技术交流研讨</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="agenda-content-wrapper" data-d="time-2">
+                        <div class="agenda-content col-lg-12 col-md-12 col-sm-12 col-xs-12 ">
+                            <div class="agenda-sec-content" data-toggle="modal" data-target="#agendaModal1">
+                                <img src="img/a2.jpg" />
+                                <div class="agenda-span">
+                                    <span class="agenda-title">智能机器人发布会</span>
+                                    <div class="agenda-detail">
+                                        <span class="agenda-date">
+                                            <i class="iconfont text-center aside-menu-icon">&#xe6b5;</i>09:00-10:00</span>
+                                        <span class="agenda-address">
+                                            <i class="iconfont text-center aside-menu-icon">&#xe62a;</i>杜厦图书馆二楼大厅</span>
+                                        <span class="agenda-des">
+                                            <i class="iconfont text-center aside-menu-icon">&#xe61b;</i>智能图书馆机器人发布与揭幕</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="agenda-content col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="agenda-sec-content" data-toggle="modal" data-target="#agendaModal2">
+                                <img src="img/a2.jpg" />
+                                <div class="agenda-span">
+                                    <span class="agenda-title">交流与研讨</span>
+                                    <div class="agenda-detail">
+                                        <span class="agenda-date">
+                                            <i class="iconfont text-center aside-menu-icon">&#xe6b5;</i>10:00-12:00</span>
+                                        <span class="agenda-address">
+                                            <i class="iconfont text-center aside-menu-icon">&#xe62a;</i>杜厦图书馆报告厅</span>
+                                        <span class="agenda-des">
+                                            <i class="iconfont text-center aside-menu-icon">&#xe61b;</i>智慧图书馆技术交流研讨</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="agenda-content col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="agenda-sec-content" style="cursor: default;">
+                                <span class="agenda-break">
+                                    <span class="agenda-time">
+                                        <i class="iconfont text-center aside-menu-icon">&#xe6b5;</i>12:00-13:00</span>
+                                    <span>
+                                        <span class="agenda-break-sec">
+                                            <i class="iconfont text-center aside-menu-icon">&#xe61b;</i>INTERMISSION</span>
+                                        <span class="agenda-break-sec">&</span>
+                                        <span class="agenda-break-sec">LUNCHBREAK</span>
+                                    </span>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="agenda-content col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="agenda-sec-content" data-toggle="modal" data-target="#agendaModal3">
+                                <img src="img/a3.jpg" />
+                                <div class="agenda-span">
+                                    <span class="agenda-title">CADAL交流</span>
+                                    <div class="agenda-detail">
+                                        <span class="agenda-date">
+                                            <i class="iconfont text-center aside-menu-icon">&#xe6b5;</i>13:30-16:00</span>
+                                        <span class="agenda-address">
+                                            <i class="iconfont text-center aside-menu-icon">&#xe62a;</i>杜厦图书馆报告厅</span>
+                                        <span class="agenda-des">
+                                            <i class="iconfont text-center aside-menu-icon">&#xe61b;</i>CADAL服务与技术交流（报告厅）；盘点机器人现场交流（外文阅览室）</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="agenda-content col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="agenda-sec-content" data-toggle="modal" data-target="#agendaModal4">
+                                <img src="img/a4.jpg" />
+                                <div class="agenda-span">
+                                    <span class="agenda-title">交流与研讨</span>
+                                    <div class="agenda-detail">
+                                        <span class="agenda-date">
+                                            <i class="iconfont text-center aside-menu-icon">&#xe6b5;</i>10:00-12:00</span>
+                                        <span class="agenda-address">
+                                            <i class="iconfont text-center aside-menu-icon">&#xe62a;</i>杜厦图书馆报告厅</span>
+                                        <span class="agenda-des">
+                                            <i class="iconfont text-center aside-menu-icon">&#xe61b;</i>智慧图书馆技术交流研讨</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="agenda-content-wrapper" data-d="time-3">
+                        <div class="agenda-content col-lg-12 col-md-12 col-sm-12 col-xs-12 ">
+                            <div class="agenda-sec-content" data-toggle="modal" data-target="#agendaModal1">
+                                <img src="img/a3.jpg" />
+                                <div class="agenda-span">
+                                    <span class="agenda-title">智能机器人发布会</span>
+                                    <div class="agenda-detail">
+                                        <span class="agenda-date">
+                                            <i class="iconfont text-center aside-menu-icon">&#xe6b5;</i>09:00-10:00</span>
+                                        <span class="agenda-address">
+                                            <i class="iconfont text-center aside-menu-icon">&#xe62a;</i>杜厦图书馆二楼大厅</span>
+                                        <span class="agenda-des">
+                                            <i class="iconfont text-center aside-menu-icon">&#xe61b;</i>智能图书馆机器人发布与揭幕</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="agenda-content col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="agenda-sec-content" data-toggle="modal" data-target="#agendaModal2">
+                                <img src="img/a2.jpg" />
+                                <div class="agenda-span">
+                                    <span class="agenda-title">交流与研讨</span>
+                                    <div class="agenda-detail">
+                                        <span class="agenda-date">
+                                            <i class="iconfont text-center aside-menu-icon">&#xe6b5;</i>10:00-12:00</span>
+                                        <span class="agenda-address">
+                                            <i class="iconfont text-center aside-menu-icon">&#xe62a;</i>杜厦图书馆报告厅</span>
+                                        <span class="agenda-des">
+                                            <i class="iconfont text-center aside-menu-icon">&#xe61b;</i>智慧图书馆技术交流研讨</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="agenda-content col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="agenda-sec-content" style="cursor: default;">
+                                <span class="agenda-break">
+                                    <span class="agenda-time">
+                                        <i class="iconfont text-center aside-menu-icon">&#xe6b5;</i>12:00-13:00</span>
+                                    <span>
+                                        <span class="agenda-break-sec">
+                                            <i class="iconfont text-center aside-menu-icon">&#xe61b;</i>INTERMISSION</span>
+                                        <span class="agenda-break-sec">&</span>
+                                        <span class="agenda-break-sec">LUNCHBREAK</span>
+                                    </span>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="agenda-content col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="agenda-sec-content" data-toggle="modal" data-target="#agendaModal3">
+                                <img src="img/a3.jpg" />
+                                <div class="agenda-span">
+                                    <span class="agenda-title">CADAL交流</span>
+                                    <div class="agenda-detail">
+                                        <span class="agenda-date">
+                                            <i class="iconfont text-center aside-menu-icon">&#xe6b5;</i>13:30-16:00</span>
+                                        <span class="agenda-address">
+                                            <i class="iconfont text-center aside-menu-icon">&#xe62a;</i>杜厦图书馆报告厅</span>
+                                        <span class="agenda-des">
+                                            <i class="iconfont text-center aside-menu-icon">&#xe61b;</i>CADAL服务与技术交流（报告厅）；盘点机器人现场交流（外文阅览室）</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="agenda-content col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="agenda-sec-content" data-toggle="modal" data-target="#agendaModal4">
+                                <img src="img/a4.jpg" />
+                                <div class="agenda-span">
+                                    <span class="agenda-title">交流与研讨</span>
+                                    <div class="agenda-detail">
+                                        <span class="agenda-date">
+                                            <i class="iconfont text-center aside-menu-icon">&#xe6b5;</i>10:00-12:00</span>
+                                        <span class="agenda-address">
+                                            <i class="iconfont text-center aside-menu-icon">&#xe62a;</i>杜厦图书馆报告厅</span>
+                                        <span class="agenda-des">
+                                            <i class="iconfont text-center aside-menu-icon">&#xe61b;</i>智慧图书馆技术交流研讨</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="agenda-day-content" data-b="day-2">
+                    <div class="sub-resp-tabs">
+                        <ul class="sub-resp-tabs-list">
+                            <li class="sub-resp-tabs-item sub-active" data-c="time-1">
+                                <h4 class="time-1">2019年5月23日</h4>
+                            </li>
+                            <li class="sub-resp-tabs-item" data-c="time-2">
+                                <h4 class="time-1">2019年5月24日</h4>
+                            </li>
+                           
+                        </ul>
+                    </div>
+                    <div class="agenda-content-wrapper" data-d="time-1">
+                        <div class="agenda-content col-lg-12 col-md-12 col-sm-12 col-xs-12 ">
+                            <div class="agenda-sec-content" data-toggle="modal" data-target="#agendaModal1">
+                                <img src="img/a2.jpg" />
+                                <div class="agenda-span">
+                                    <span class="agenda-title">智能机器人发布会</span>
+                                    <div class="agenda-detail">
+                                        <span class="agenda-date">
+                                            <i class="iconfont text-center aside-menu-icon">&#xe6b5;</i>09:00-10:00</span>
+                                        <span class="agenda-address">
+                                            <i class="iconfont text-center aside-menu-icon">&#xe62a;</i>杜厦图书馆二楼大厅</span>
+                                        <span class="agenda-des">
+                                            <i class="iconfont text-center aside-menu-icon">&#xe61b;</i>智能图书馆机器人发布与揭幕</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="agenda-content col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="agenda-sec-content">
+                                <span class="agenda-break">
+                                    <span class="agenda-time">
+                                        <i class="iconfont text-center aside-menu-icon">&#xe6b5;</i>12:00-13:00</span>
+                                    <span>
+                                        <span class="agenda-break-sec">
+                                            <i class="iconfont text-center aside-menu-icon">&#xe61b;</i>INTERMISSION</span>
+                                        <span class="agenda-break-sec">&</span>
+                                        <span class="agenda-break-sec">LUNCHBREAK</span>
+                                    </span>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="agenda-content col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="agenda-sec-content" data-toggle="modal" data-target="#agendaModal4">
+                                <img src="img/a4.jpg" />
+                                <div class="agenda-span">
+                                    <span class="agenda-title">交流与研讨</span>
+                                    <div class="agenda-detail">
+                                        <span class="agenda-date">
+                                            <i class="iconfont text-center aside-menu-icon">&#xe6b5;</i>10:00-12:00</span>
+                                        <span class="agenda-address">
+                                            <i class="iconfont text-center aside-menu-icon">&#xe62a;</i>杜厦图书馆报告厅</span>
+                                        <span class="agenda-des">
+                                            <i class="iconfont text-center aside-menu-icon">&#xe61b;</i>智慧图书馆技术交流研讨</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="agenda-content-wrapper" data-d="time-2">
+                        <div class="agenda-content col-lg-12 col-md-12 col-sm-12 col-xs-12 ">
+                            <div class="agenda-sec-content" data-toggle="modal" data-target="#agendaModal1">
+                                <img src="img/a3.jpg" />
+                                <div class="agenda-span">
+                                    <span class="agenda-title">智能机器人发布会</span>
+                                    <div class="agenda-detail">
+                                        <span class="agenda-date">
+                                            <i class="iconfont text-center aside-menu-icon">&#xe6b5;</i>09:00-10:00</span>
+                                        <span class="agenda-address">
+                                            <i class="iconfont text-center aside-menu-icon">&#xe62a;</i>杜厦图书馆二楼大厅</span>
+                                        <span class="agenda-des">
+                                            <i class="iconfont text-center aside-menu-icon">&#xe61b;</i>智能图书馆机器人发布与揭幕</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="agenda-content col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="agenda-sec-content">
+                                <span class="agenda-break">
+                                    <span class="agenda-time">
+                                        <i class="iconfont text-center aside-menu-icon">&#xe6b5;</i>12:00-13:00</span>
+                                    <span>
+                                        <span class="agenda-break-sec">
+                                            <i class="iconfont text-center aside-menu-icon">&#xe61b;</i>INTERMISSION</span>
+                                        <span class="agenda-break-sec">&</span>
+                                        <span class="agenda-break-sec">LUNCHBREAK</span>
+                                    </span>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="agenda-content col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="agenda-sec-content" data-toggle="modal" data-target="#agendaModal4">
+                                <img src="img/a4.jpg" />
+                                <div class="agenda-span">
+                                    <span class="agenda-title">交流与研讨</span>
+                                    <div class="agenda-detail">
+                                        <span class="agenda-date">
+                                            <i class="iconfont text-center aside-menu-icon">&#xe6b5;</i>10:00-12:00</span>
+                                        <span class="agenda-address">
+                                            <i class="iconfont text-center aside-menu-icon">&#xe62a;</i>杜厦图书馆报告厅</span>
+                                        <span class="agenda-des">
+                                            <i class="iconfont text-center aside-menu-icon">&#xe61b;</i>智慧图书馆技术交流研讨</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+                <div class="agenda-day-content" data-b="day-3">
+                    <div class="sub-resp-tabs">
+                        <ul class="sub-resp-tabs-list">
+                            <li class="sub-resp-tabs-item sub-active" data-c="time-1">
+                                <h4 class="time-1">2019年5月23日</h4>
+                            </li>
+                            <li class="sub-resp-tabs-item" data-c="time-2">
+                                <h4 class="time-1">2019年5月24日</h4>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="agenda-content-wrapper" data-d="time-1">
+                        <div class="agenda-content col-lg-12 col-md-12 col-sm-12 col-xs-12 ">
+                            <div class="agenda-sec-content" data-toggle="modal" data-target="#agendaModal1">
+                                <img src="img/a3.jpg" />
+                                <div class="agenda-span">
+                                    <span class="agenda-title">智能机器人发布会</span>
+                                    <div class="agenda-detail">
+                                        <span class="agenda-date">
+                                            <i class="iconfont text-center aside-menu-icon">&#xe6b5;</i>09:00-10:00</span>
+                                        <span class="agenda-address">
+                                            <i class="iconfont text-center aside-menu-icon">&#xe62a;</i>杜厦图书馆二楼大厅</span>
+                                        <span class="agenda-des">
+                                            <i class="iconfont text-center aside-menu-icon">&#xe61b;</i>智能图书馆机器人发布与揭幕</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="agenda-content col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="agenda-sec-content" data-toggle="modal" data-target="#agendaModal2">
+                                <img src="img/a2.jpg" />
+                                <div class="agenda-span">
+                                    <span class="agenda-title">交流与研讨</span>
+                                    <div class="agenda-detail">
+                                        <span class="agenda-date">
+                                            <i class="iconfont text-center aside-menu-icon">&#xe6b5;</i>10:00-12:00</span>
+                                        <span class="agenda-address">
+                                            <i class="iconfont text-center aside-menu-icon">&#xe62a;</i>杜厦图书馆报告厅</span>
+                                        <span class="agenda-des">
+                                            <i class="iconfont text-center aside-menu-icon">&#xe61b;</i>智慧图书馆技术交流研讨</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="agenda-content col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="agenda-sec-content">
+                                <span class="agenda-break">
+                                    <span class="agenda-time">
+                                        <i class="iconfont text-center aside-menu-icon">&#xe6b5;</i>12:00-13:00</span>
+                                    <span>
+                                        <span class="agenda-break-sec">
+                                            <i class="iconfont text-center aside-menu-icon">&#xe61b;</i>INTERMISSION</span>
+                                        <span class="agenda-break-sec">&</span>
+                                        <span class="agenda-break-sec">LUNCHBREAK</span>
+                                    </span>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="agenda-content col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="agenda-sec-content" data-toggle="modal" data-target="#agendaModal3">
+                                <img src="img/a3.jpg" />
+                                <div class="agenda-span">
+                                    <span class="agenda-title">CADAL交流</span>
+                                    <div class="agenda-detail">
+                                        <span class="agenda-date">
+                                            <i class="iconfont text-center aside-menu-icon">&#xe6b5;</i>13:30-16:00</span>
+                                        <span class="agenda-address">
+                                            <i class="iconfont text-center aside-menu-icon">&#xe62a;</i>杜厦图书馆报告厅</span>
+                                        <span class="agenda-des">
+                                            <i class="iconfont text-center aside-menu-icon">&#xe61b;</i>CADAL服务与技术交流（报告厅）；盘点机器人现场交流（外文阅览室）</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="agenda-content col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="agenda-sec-content" data-toggle="modal" data-target="#agendaModal4">
+                                <img src="img/a4.jpg" />
+                                <div class="agenda-span">
+                                    <span class="agenda-title">交流与研讨</span>
+                                    <div class="agenda-detail">
+                                        <span class="agenda-date">
+                                            <i class="iconfont text-center aside-menu-icon">&#xe6b5;</i>10:00-12:00</span>
+                                        <span class="agenda-address">
+                                            <i class="iconfont text-center aside-menu-icon">&#xe62a;</i>杜厦图书馆报告厅</span>
+                                        <span class="agenda-des">
+                                            <i class="iconfont text-center aside-menu-icon">&#xe61b;</i>智慧图书馆技术交流研讨</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="agenda-content-wrapper" data-d="time-2">
+                        <div class="agenda-content col-lg-12 col-md-12 col-sm-12 col-xs-12 ">
+                            <div class="agenda-sec-content" data-toggle="modal" data-target="#agendaModal1">
+                                <img src="img/a2.jpg" />
+                                <div class="agenda-span">
+                                    <span class="agenda-title">智能机器人发布会</span>
+                                    <div class="agenda-detail">
+                                        <span class="agenda-date">
+                                            <i class="iconfont text-center aside-menu-icon">&#xe6b5;</i>09:00-10:00</span>
+                                        <span class="agenda-address">
+                                            <i class="iconfont text-center aside-menu-icon">&#xe62a;</i>杜厦图书馆二楼大厅</span>
+                                        <span class="agenda-des">
+                                            <i class="iconfont text-center aside-menu-icon">&#xe61b;</i>智能图书馆机器人发布与揭幕</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="agenda-content col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="agenda-sec-content" data-toggle="modal" data-target="#agendaModal2">
+                                <img src="img/a2.jpg" />
+                                <div class="agenda-span">
+                                    <span class="agenda-title">交流与研讨</span>
+                                    <div class="agenda-detail">
+                                        <span class="agenda-date">
+                                            <i class="iconfont text-center aside-menu-icon">&#xe6b5;</i>10:00-12:00</span>
+                                        <span class="agenda-address">
+                                            <i class="iconfont text-center aside-menu-icon">&#xe62a;</i>杜厦图书馆报告厅</span>
+                                        <span class="agenda-des">
+                                            <i class="iconfont text-center aside-menu-icon">&#xe61b;</i>智慧图书馆技术交流研讨</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="agenda-content col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="agenda-sec-content">
+                                <span class="agenda-break">
+                                    <span class="agenda-time">
+                                        <i class="iconfont text-center aside-menu-icon">&#xe6b5;</i>12:00-13:00</span>
+                                    <span>
+                                        <span class="agenda-break-sec">
+                                            <i class="iconfont text-center aside-menu-icon">&#xe61b;</i>INTERMISSION</span>
+                                        <span class="agenda-break-sec">&</span>
+                                        <span class="agenda-break-sec">LUNCHBREAK</span>
+                                    </span>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="agenda-content col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="agenda-sec-content" data-toggle="modal" data-target="#agendaModal3">
+                                <img src="img/a3.jpg" />
+                                <div class="agenda-span">
+                                    <span class="agenda-title">CADAL交流</span>
+                                    <div class="agenda-detail">
+                                        <span class="agenda-date">
+                                            <i class="iconfont text-center aside-menu-icon">&#xe6b5;</i>13:30-16:00</span>
+                                        <span class="agenda-address">
+                                            <i class="iconfont text-center aside-menu-icon">&#xe62a;</i>杜厦图书馆报告厅</span>
+                                        <span class="agenda-des">
+                                            <i class="iconfont text-center aside-menu-icon">&#xe61b;</i>CADAL服务与技术交流（报告厅）；盘点机器人现场交流（外文阅览室）</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="agenda-content col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="agenda-sec-content" data-toggle="modal" data-target="#agendaModal4">
+                                <img src="img/a4.jpg" />
+                                <div class="agenda-span">
+                                    <span class="agenda-title">交流与研讨</span>
+                                    <div class="agenda-detail">
+                                        <span class="agenda-date">
+                                            <i class="iconfont text-center aside-menu-icon">&#xe6b5;</i>10:00-12:00</span>
+                                        <span class="agenda-address">
+                                            <i class="iconfont text-center aside-menu-icon">&#xe62a;</i>杜厦图书馆报告厅</span>
+                                        <span class="agenda-des">
+                                            <i class="iconfont text-center aside-menu-icon">&#xe61b;</i>智慧图书馆技术交流研讨</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="agenda-day-content" data-b="day-4">
+                    <div class="sub-resp-tabs">
+                        <ul class="sub-resp-tabs-list">
+                            <li class="sub-resp-tabs-item sub-active" data-c="time-1">
+                                <h4 class="time-1">2019年5月23日</h4>
+                            </li>
+                            <li class="sub-resp-tabs-item" data-c="time-2">
+                                <h4 class="time-1">2019年5月24日</h4>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="agenda-content-wrapper" data-d="time-1">
+                        <div class="agenda-content col-lg-12 col-md-12 col-sm-12 col-xs-12 ">
+                            <div class="agenda-sec-content" data-toggle="modal" data-target="#agendaModal1">
+                                <img src="img/a4.jpg" />
+                                <div class="agenda-span">
+                                    <span class="agenda-title">智能机器人发布会</span>
+                                    <div class="agenda-detail">
+                                        <span class="agenda-date">
+                                            <i class="iconfont text-center aside-menu-icon">&#xe6b5;</i>09:00-10:00</span>
+                                        <span class="agenda-address">
+                                            <i class="iconfont text-center aside-menu-icon">&#xe62a;</i>杜厦图书馆二楼大厅</span>
+                                        <span class="agenda-des">
+                                            <i class="iconfont text-center aside-menu-icon">&#xe61b;</i>智能图书馆机器人发布与揭幕</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="agenda-content col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="agenda-sec-content" data-toggle="modal" data-target="#agendaModal2">
+                                <img src="img/a2.jpg" />
+                                <div class="agenda-span">
+                                    <span class="agenda-title">交流与研讨</span>
+                                    <div class="agenda-detail">
+                                        <span class="agenda-date">
+                                            <i class="iconfont text-center aside-menu-icon">&#xe6b5;</i>10:00-12:00</span>
+                                        <span class="agenda-address">
+                                            <i class="iconfont text-center aside-menu-icon">&#xe62a;</i>杜厦图书馆报告厅</span>
+                                        <span class="agenda-des">
+                                            <i class="iconfont text-center aside-menu-icon">&#xe61b;</i>智慧图书馆技术交流研讨</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="agenda-content col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="agenda-sec-content">
+                                <span class="agenda-break">
+                                    <span class="agenda-time">
+                                        <i class="iconfont text-center aside-menu-icon">&#xe6b5;</i>12:00-13:00</span>
+                                    <span>
+                                        <span class="agenda-break-sec">
+                                            <i class="iconfont text-center aside-menu-icon">&#xe61b;</i>INTERMISSION</span>
+                                        <span class="agenda-break-sec">&</span>
+                                        <span class="agenda-break-sec">LUNCHBREAK</span>
+                                    </span>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="agenda-content col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="agenda-sec-content" data-toggle="modal" data-target="#agendaModal3">
+                                <img src="img/a3.jpg" />
+                                <div class="agenda-span">
+                                    <span class="agenda-title">CADAL交流</span>
+                                    <div class="agenda-detail">
+                                        <span class="agenda-date">
+                                            <i class="iconfont text-center aside-menu-icon">&#xe6b5;</i>13:30-16:00</span>
+                                        <span class="agenda-address">
+                                            <i class="iconfont text-center aside-menu-icon">&#xe62a;</i>杜厦图书馆报告厅</span>
+                                        <span class="agenda-des">
+                                            <i class="iconfont text-center aside-menu-icon">&#xe61b;</i>CADAL服务与技术交流（报告厅）；盘点机器人现场交流（外文阅览室）</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="agenda-content col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="agenda-sec-content" data-toggle="modal" data-target="#agendaModal4">
+                                <img src="img/a4.jpg" />
+                                <div class="agenda-span">
+                                    <span class="agenda-title">交流与研讨</span>
+                                    <div class="agenda-detail">
+                                        <span class="agenda-date">
+                                            <i class="iconfont text-center aside-menu-icon">&#xe6b5;</i>10:00-12:00</span>
+                                        <span class="agenda-address">
+                                            <i class="iconfont text-center aside-menu-icon">&#xe62a;</i>杜厦图书馆报告厅</span>
+                                        <span class="agenda-des">
+                                            <i class="iconfont text-center aside-menu-icon">&#xe61b;</i>智慧图书馆技术交流研讨</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="agenda-content-wrapper" data-d="time-2">
+                        <div class="agenda-content col-lg-12 col-md-12 col-sm-12 col-xs-12 ">
+                            <div class="agenda-sec-content" data-toggle="modal" data-target="#agendaModal1">
+                                <img src="img/a2.jpg" />
+                                <div class="agenda-span">
+                                    <span class="agenda-title">智能机器人发布会</span>
+                                    <div class="agenda-detail">
+                                        <span class="agenda-date">
+                                            <i class="iconfont text-center aside-menu-icon">&#xe6b5;</i>09:00-10:00</span>
+                                        <span class="agenda-address">
+                                            <i class="iconfont text-center aside-menu-icon">&#xe62a;</i>杜厦图书馆二楼大厅</span>
+                                        <span class="agenda-des">
+                                            <i class="iconfont text-center aside-menu-icon">&#xe61b;</i>智能图书馆机器人发布与揭幕</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="agenda-content col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="agenda-sec-content" data-toggle="modal" data-target="#agendaModal2">
+                                <img src="img/a2.jpg" />
+                                <div class="agenda-span">
+                                    <span class="agenda-title">交流与研讨</span>
+                                    <div class="agenda-detail">
+                                        <span class="agenda-date">
+                                            <i class="iconfont text-center aside-menu-icon">&#xe6b5;</i>10:00-12:00</span>
+                                        <span class="agenda-address">
+                                            <i class="iconfont text-center aside-menu-icon">&#xe62a;</i>杜厦图书馆报告厅</span>
+                                        <span class="agenda-des">
+                                            <i class="iconfont text-center aside-menu-icon">&#xe61b;</i>智慧图书馆技术交流研讨</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="agenda-content col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="agenda-sec-content">
+                                <span class="agenda-break">
+                                    <span class="agenda-time">
+                                        <i class="iconfont text-center aside-menu-icon">&#xe6b5;</i>12:00-13:00</span>
+                                    <span>
+                                        <span class="agenda-break-sec">
+                                            <i class="iconfont text-center aside-menu-icon">&#xe61b;</i>INTERMISSION</span>
+                                        <span class="agenda-break-sec">&</span>
+                                        <span class="agenda-break-sec">LUNCHBREAK</span>
+                                    </span>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="agenda-content col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="agenda-sec-content" data-toggle="modal" data-target="#agendaModal3">
+                                <img src="img/a3.jpg" />
+                                <div class="agenda-span">
+                                    <span class="agenda-title">CADAL交流</span>
+                                    <div class="agenda-detail">
+                                        <span class="agenda-date">
+                                            <i class="iconfont text-center aside-menu-icon">&#xe6b5;</i>13:30-16:00</span>
+                                        <span class="agenda-address">
+                                            <i class="iconfont text-center aside-menu-icon">&#xe62a;</i>杜厦图书馆报告厅</span>
+                                        <span class="agenda-des">
+                                            <i class="iconfont text-center aside-menu-icon">&#xe61b;</i>CADAL服务与技术交流（报告厅）；盘点机器人现场交流（外文阅览室）</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="agenda-content col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="agenda-sec-content" data-toggle="modal" data-target="#agendaModal4">
+                                <img src="img/a4.jpg" />
+                                <div class="agenda-span">
+                                    <span class="agenda-title">交流与研讨</span>
+                                    <div class="agenda-detail">
+                                        <span class="agenda-date">
+                                            <i class="iconfont text-center aside-menu-icon">&#xe6b5;</i>10:00-12:00</span>
+                                        <span class="agenda-address">
+                                            <i class="iconfont text-center aside-menu-icon">&#xe62a;</i>杜厦图书馆报告厅</span>
+                                        <span class="agenda-des">
+                                            <i class="iconfont text-center aside-menu-icon">&#xe61b;</i>智慧图书馆技术交流研讨</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="agenda-day-content" data-b="day-5">
+                    <div class="sub-resp-tabs">
+                        <ul class="sub-resp-tabs-list">
+                            <li class="sub-resp-tabs-item sub-active" data-c="time-1">
+                                <h4 class="time-1">2019年5月23日</h4>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="agenda-content-wrapper" data-d="time-1">
+                        <div class="agenda-content col-lg-12 col-md-12 col-sm-12 col-xs-12 ">
+                            <div class="agenda-sec-content" data-toggle="modal" data-target="#agendaModal1">
+                                <img src="img/a1.jpg" />
+                                <div class="agenda-span">
+                                    <span class="agenda-title">智能机器人发布会</span>
+                                    <div class="agenda-detail">
+                                        <span class="agenda-date">
+                                            <i class="iconfont text-center aside-menu-icon">&#xe6b5;</i>09:00-10:00</span>
+                                        <span class="agenda-address">
+                                            <i class="iconfont text-center aside-menu-icon">&#xe62a;</i>杜厦图书馆二楼大厅</span>
+                                        <span class="agenda-des">
+                                            <i class="iconfont text-center aside-menu-icon">&#xe61b;</i>智能图书馆机器人发布与揭幕</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="agenda-content col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="agenda-sec-content">
+                                <span class="agenda-break">
+                                    <span class="agenda-time">
+                                        <i class="iconfont text-center aside-menu-icon">&#xe6b5;</i>12:00-13:00</span>
+                                    <span>
+                                        <span class="agenda-break-sec">
+                                            <i class="iconfont text-center aside-menu-icon">&#xe61b;</i>INTERMISSION</span>
+                                        <span class="agenda-break-sec">&</span>
+                                        <span class="agenda-break-sec">LUNCHBREAK</span>
+                                    </span>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="agenda-content col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="agenda-sec-content" data-toggle="modal" data-target="#agendaModal3">
+                                <img src="img/a3.jpg" />
+                                <div class="agenda-span">
+                                    <span class="agenda-title">CADAL交流</span>
+                                    <div class="agenda-detail">
+                                        <span class="agenda-date">
+                                            <i class="iconfont text-center aside-menu-icon">&#xe6b5;</i>13:30-16:00</span>
+                                        <span class="agenda-address">
+                                            <i class="iconfont text-center aside-menu-icon">&#xe62a;</i>杜厦图书馆报告厅</span>
+                                        <span class="agenda-des">
+                                            <i class="iconfont text-center aside-menu-icon">&#xe61b;</i>CADAL服务与技术交流（报告厅）；盘点机器人现场交流（外文阅览室）</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="agenda-content col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="agenda-sec-content" data-toggle="modal" data-target="#agendaModal4">
+                                <img src="img/a4.jpg" />
+                                <div class="agenda-span">
+                                    <span class="agenda-title">交流与研讨</span>
+                                    <div class="agenda-detail">
+                                        <span class="agenda-date">
+                                            <i class="iconfont text-center aside-menu-icon">&#xe6b5;</i>10:00-12:00</span>
+                                        <span class="agenda-address">
+                                            <i class="iconfont text-center aside-menu-icon">&#xe62a;</i>杜厦图书馆报告厅</span>
+                                        <span class="agenda-des">
+                                            <i class="iconfont text-center aside-menu-icon">&#xe61b;</i>智慧图书馆技术交流研讨</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 新闻 -->
+<div class="container-fluid news m-content-wrapper" id="news">
+    
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 ">
+                <span class="row-title col-lg-12 col-md-12 col-sm-12">新闻</span>
+            </div>
+        </div>
+
+        <!-- Button trigger modal -->
+        <div class="news-content group-top">
+            <i class="iconfont news-icon">&#xe642;</i>
+            <p class="news-title" data-toggle="modal" data-target="#myModal">化院本科生获“挑战杯”特等奖</p>
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <h4 class="modal-title" id="myModalLabel">化院本科生获“挑战杯”特等奖</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5月25日，学习交流团前往浙江大学化学实验教学中心参观交流。交流会由浙江大学基础化学实验教学中心主任王敏教授主持，书记雷鸣、副主任赵华绒、曾秀琼和王国平，以及实验课程负责人等19位教师与学习交流团10位成员进行交流研讨。双方分别介绍化学实验教学中心总体情况、近些年的实践教学改革思路，双方教师就实验课程设置、教学内容、分层次教学情况、实验师资队伍（特别是青年实验技术队伍）、研究生助教、实验室安全管理、安全文化建设、工作中面临的共同难点等主题进行广泛深入交流。随后学习交流团成员深入浙江大学化学实验教学中心实验室进行调研，并围绕实验室建设细节展开讨论。此次交流取得良好成效，促进了两校化学实验教学中心的相互了解，也为开展工作拓宽了思路。通过一整天的交流，双方受益匪浅，双方约定今后将进一步加强双边交流，适时开展实验教学研讨，为建设化学国家级实验教学示范中心协同努力。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Button trigger modal -->
+        <div class="news-content">
+            <i class="iconfont news-icon">&#xe642;</i>
+            <p class="news-title" data-toggle="modal" data-target="#myModal">化院学子获第十届中国青少年科技创新奖</p>
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <h4 class="modal-title" id="myModalLabel">化院学子获第十届中国青少年科技创新奖</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5月25日，学习交流团前往浙江大学化学实验教学中心参观交流。交流会由浙江大学基础化学实验教学中心主任王敏教授主持，书记雷鸣、副主任赵华绒、曾秀琼和王国平，以及实验课程负责人等19位教师与学习交流团10位成员进行交流研讨。双方分别介绍化学实验教学中心总体情况、近些年的实践教学改革思路，双方教师就实验课程设置、教学内容、分层次教学情况、实验师资队伍（特别是青年实验技术队伍）、研究生助教、实验室安全管理、安全文化建设、工作中面临的共同难点等主题进行广泛深入交流。随后学习交流团成员深入浙江大学化学实验教学中心实验室进行调研，并围绕实验室建设细节展开讨论。此次交流取得良好成效，促进了两校化学实验教学中心的相互了解，也为开展工作拓宽了思路。通过一整天的交流，双方受益匪浅，双方约定今后将进一步加强双边交流，适时开展实验教学研讨，为建设化学国家级实验教学示范中心协同努力。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Button trigger modal -->
+        <div class="news-content">
+            <i class="iconfont news-icon">&#xe642;</i>
+            <p class="news-title" data-toggle="modal" data-target="#myModal">南大化院学子在第九届全国大学生化学实验竞赛中取得佳绩</p>
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <h4 class="modal-title" id="myModalLabel">南大化院学子在第九届全国大学生化学实验竞赛中取得佳绩</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5月25日，学习交流团前往浙江大学化学实验教学中心参观交流。交流会由浙江大学基础化学实验教学中心主任王敏教授主持，书记雷鸣、副主任赵华绒、曾秀琼和王国平，以及实验课程负责人等19位教师与学习交流团10位成员进行交流研讨。双方分别介绍化学实验教学中心总体情况、近些年的实践教学改革思路，双方教师就实验课程设置、教学内容、分层次教学情况、实验师资队伍（特别是青年实验技术队伍）、研究生助教、实验室安全管理、安全文化建设、工作中面临的共同难点等主题进行广泛深入交流。随后学习交流团成员深入浙江大学化学实验教学中心实验室进行调研，并围绕实验室建设细节展开讨论。此次交流取得良好成效，促进了两校化学实验教学中心的相互了解，也为开展工作拓宽了思路。通过一整天的交流，双方受益匪浅，双方约定今后将进一步加强双边交流，适时开展实验教学研讨，为建设化学国家级实验教学示范中心协同努力。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Button trigger modal -->
+        <div class="news-content">
+            <i class="iconfont news-icon">&#xe642;</i>
+            <p class="news-title" data-toggle="modal" data-target="#myModal">南京大学化学化工学院学生团队荣获全国“互联网+”大学生创新创业大赛季军</p>
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <h4 class="modal-title" id="myModalLabel">南京大学化学化工学院学生团队荣获全国“互联网+”大学生创新创业大赛季军</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5月25日，学习交流团前往浙江大学化学实验教学中心参观交流。交流会由浙江大学基础化学实验教学中心主任王敏教授主持，书记雷鸣、副主任赵华绒、曾秀琼和王国平，以及实验课程负责人等19位教师与学习交流团10位成员进行交流研讨。双方分别介绍化学实验教学中心总体情况、近些年的实践教学改革思路，双方教师就实验课程设置、教学内容、分层次教学情况、实验师资队伍（特别是青年实验技术队伍）、研究生助教、实验室安全管理、安全文化建设、工作中面临的共同难点等主题进行广泛深入交流。随后学习交流团成员深入浙江大学化学实验教学中心实验室进行调研，并围绕实验室建设细节展开讨论。此次交流取得良好成效，促进了两校化学实验教学中心的相互了解，也为开展工作拓宽了思路。通过一整天的交流，双方受益匪浅，双方约定今后将进一步加强双边交流，适时开展实验教学研讨，为建设化学国家级实验教学示范中心协同努力。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Button trigger modal -->
+        <div class="news-content">
+            <i class="iconfont news-icon">&#xe642;</i>
+            <p class="news-title" data-toggle="modal" data-target="#myModal">化院学子在“第二届全国高校环保科技创意大赛”中摘得桂冠</p>
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <h4 class="modal-title" id="myModalLabel">化院学子在“第二届全国高校环保科技创意大赛”中摘得桂冠</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5月25日，学习交流团前往浙江大学化学实验教学中心参观交流。交流会由浙江大学基础化学实验教学中心主任王敏教授主持，书记雷鸣、副主任赵华绒、曾秀琼和王国平，以及实验课程负责人等19位教师与学习交流团10位成员进行交流研讨。双方分别介绍化学实验教学中心总体情况、近些年的实践教学改革思路，双方教师就实验课程设置、教学内容、分层次教学情况、实验师资队伍（特别是青年实验技术队伍）、研究生助教、实验室安全管理、安全文化建设、工作中面临的共同难点等主题进行广泛深入交流。随后学习交流团成员深入浙江大学化学实验教学中心实验室进行调研，并围绕实验室建设细节展开讨论。此次交流取得良好成效，促进了两校化学实验教学中心的相互了解，也为开展工作拓宽了思路。通过一整天的交流，双方受益匪浅，双方约定今后将进一步加强双边交流，适时开展实验教学研讨，为建设化学国家级实验教学示范中心协同努力。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Button trigger modal -->
+        <div class="news-content">
+            <i class="iconfont news-icon">&#xe642;</i>
+            <p class="news-title" data-toggle="modal" data-target="#myModal">2012台湾东元科技创意竞赛化院学子获佳绩</p>
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <h4 class="modal-title" id="myModalLabel">2012台湾东元科技创意竞赛化院学子获佳绩</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5月25日，学习交流团前往浙江大学化学实验教学中心参观交流。交流会由浙江大学基础化学实验教学中心主任王敏教授主持，书记雷鸣、副主任赵华绒、曾秀琼和王国平，以及实验课程负责人等19位教师与学习交流团10位成员进行交流研讨。双方分别介绍化学实验教学中心总体情况、近些年的实践教学改革思路，双方教师就实验课程设置、教学内容、分层次教学情况、实验师资队伍（特别是青年实验技术队伍）、研究生助教、实验室安全管理、安全文化建设、工作中面临的共同难点等主题进行广泛深入交流。随后学习交流团成员深入浙江大学化学实验教学中心实验室进行调研，并围绕实验室建设细节展开讨论。此次交流取得良好成效，促进了两校化学实验教学中心的相互了解，也为开展工作拓宽了思路。通过一整天的交流，双方受益匪浅，双方约定今后将进一步加强双边交流，适时开展实验教学研讨，为建设化学国家级实验教学示范中心协同努力。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+</div>
+
+<!-- 嘉宾 -->
+<div class="guest-container" id="guest">
+    <div class="container-fluid guest nav-doc" id="guest">
+        <div class="container" >
+            <div class="row">
+                <div class="row-content col-lg-12 col-md-12 col-sm-12 col-sm-offset-0 col-xs-10 col-xs-offset-1">
+                    <span class="row-title col-lg-12 col-md-12 col-sm-12">嘉宾</span>
+                    <div class="speaker-content col-lg-3 col-md-3 col-sm-3 col-xs-6">
+                        <div class="guest-sec-content guest-sec-content1" data-toggle="modal" data-target="#guestModal1">
+                            <div class="guest-top">
+                                <div class="guest-img"><img src="img/guest1.jpg"></div>
+                            </div>
+                            <div class="guest-info">
+                                <span class="guest-name ">陈力军</span>
+                                <span class="guest-position">面向服务的图书馆技术发展</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="speaker-content col-lg-3 col-md-3 col-sm-3 col-xs-6">
+                        <div class="guest-sec-content guest-sec-content2" data-toggle="modal" data-target="#guestModal2">
+                            <div class="guest-top">
+                                <div class="guest-img"><img src="img/guest2.jpg"></div>
+                            </div>
+                            <div class="guest-info">
+                                <span class="guest-name">张甲</span>
+                                <span class="guest-position">面向服务的图书馆技术发展</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="speaker-content col-lg-3 col-md-3 col-sm-3 col-xs-6">
+                        <div class="guest-sec-content guest-sec-content3" data-toggle="modal" data-target="#guestModal3">
+                            <div class="guest-top">
+                                <div class="guest-img"><img src="img/guest3.jpg"></div>
+                            </div>
+                            <div class="guest-info">
+                                <span class="guest-name ">黄晨</span>
+                                <span class="guest-position ">基于CADAL的共享与实践</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="speaker-content col-lg-3 col-md-3 col-sm-3 col-xs-6">
+                        <div class="guest-sec-content guest-sec-content4" data-toggle="modal" data-target="#guestModal4">
+                            <div class="guest-top">
+                                <div class="guest-img"><img src="img/guest4.jpg"></div>
+                            </div>
+                            <div class="guest-info">
+                                <span class="guest-name ">樊慧丽</span>
+                                <span class="guest-position ">江苏省地区中心CADAL项目资源与服务推广</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 赞助商 -->
+<div class="container-fluid qualification nav-doc" id="sponsor">
+    <div class="container">
+        <div class="row">
+            <div class="row-content col-lg-12 col-md-12 col-sm-12">
+                <span class="row-title col-lg-12 col-md-12 col-sm-12">赞助商</span>
+                <div class=" col-sm-12">
+                    <div class="qualifi col-sm-2" data-toggle="modal" data-target="#qualifiModal1">
+                        <div class="qualifi-img"><img class="gray-img" src="img/nd.jpg"/nd><img class="color-img" src="img/rlogo-1.jpg"/></div>
+                        <div class="qualifi-name">南京大学</div>
+                    </div>
+                    <div class="qualifi col-sm-2" data-toggle="modal" data-target="#qualifiModal2">
+                        <div class="qualifi-img"><img class="gray-img" src="img/nd.jpg"/><img class="color-img" src="img/rlogo-2.jpg"/></div>
+                        <div class="qualifi-name">南京大学</div>
+                    </div>
+                    <div class="qualifi col-sm-2" data-toggle="modal" data-target="#qualifiModal3">
+                        <div class="qualifi-img"><img class="gray-img" src="img/nd.jpg"/><img class="color-img" src="img/rlogo-3.jpg"/></div>
+                        <div class="qualifi-name">南京大学</div>
+                    </div>
+                    <div class="qualifi col-sm-2" data-toggle="modal" data-target="#qualifiModal4">
+                        <div class="qualifi-img"><img class="gray-img" src="img/nd.jpg"/><img class="color-img" src="img/rlogo-4.jpg"/></div>
+                        <div class="qualifi-name">南京大学</div>
+                    </div>
+                    <div class="qualifi col-sm-2" data-toggle="modal" data-target="#qualifiModal5">
+                        <div class="qualifi-img"><img class="gray-img" src="img/nd.jpg"/><img class="color-img" src="img/rlogo-5.jpg"/></div>
+                        <div class="qualifi-name">南京大学</div>
+                    </div>
+                    <div class="qualifi col-sm-2" data-toggle="modal" data-target="#qualifiModal6">
+                        <div class="qualifi-img"><img class="gray-img" src="img/nd.jpg"/><img class="color-img" src="img/rlogo-6.jpg"/></div>
+                        <div class="qualifi-name">南京大学</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="container-fluid map-container nav-doc" id="map-container"></div>
+
+<!--百度地图API-->
+<script type="text/javascript">
+    $(document).ready(function() {
+        var map = new BMap.Map("map-container");
+        map.setMapStyle({style:'grayscale'});
+        map.setCurrentCity("南京");
+        map.centerAndZoom(new BMap.Point(118.9069664,32.1275042), 12);
+        map.disableScrollWheelZoom();
+        $("#map-container").click(function(){
+            map.enableScrollWheelZoom();
+        });
+        // map.disableDragging();
+        // map.addEventListener("touchstart",function(e){
+        //
+        // });
+
+        var myIcon = new BMap.Icon("img/map-point.png", new BMap.Size(32, 32), {
+            // 指定定位位置
+            offset: new BMap.Size(10, 25)
+            // 当需要从一幅较大的图片中截取某部分作为标注图标时，需要指定大图的偏移位置
+            // imageOffset: new BMap.Size(0, 0 - i * 25)
+            // 设置图片偏移
+        });
+        var marker = new BMap.Marker(new BMap.Point( "118.9069664" , "32.1275042"),{icon: myIcon});
+
+        map.addOverlay(marker);
+        // var venue_name = "南京信息职业技术学院";
+        // var venue_street = "文澜路99号";
+        // var licontent = "<b>" + venue_name + "</b><br>";
+        // licontent += "<span><strong>地址：</strong>" + venue_street  + "</span><br>";
+        // licontent += "<span class=\"input\"><label><strong id=\"start\">起点：</strong></label>" +
+        //     "<input style=\"width:80%;\" class=\"outset form-control\" type=\"text\" name=\"origin\" value=\"\"/><br><br>" +
+        //     "<input class=\"outset-but btn btn-sm btn-primary pull-left\" style=\"margin-right:10px;\" id= \"bus\" type=\"button\" value=\"公交\" />" +
+        //     "<input class=\"outset-but btn btn-sm btn-primary pull-left\" id=\"car\" type=\"button\" value=\"驾车\" />" +
+        //     "<a class=\"gotob\" ></a>" +
+        //     "</span>";
+        // var hiddeninput="<input type=\"hidden\" value=\""+'<%= venue.city %>'+"\" name=\"region\" />" +
+        //     "<input type=\"hidden\" value=\"html\" name=\"output\" />" +
+        //     "<input type=\"hidden\" value=\"driving\" name=\"mode\" />" +
+        //     "<input type=\"hidden\" value=\"latlng:"+marker.getPosition().lat+","+marker.getPosition().lng+"|name:"+"\" name=\"destination\" />";
+        // var content1 ="<form class=\"form-inline\" id=\"gotobaiduform\" target=\"_blank\" method=\"get\">" + licontent +hiddeninput+"</form>";
+        //
+        // var opts1 = { width: 300 };
+        // var infoWindow = new BMap.InfoWindow(content1, opts1);
+        // marker.openInfoWindow(infoWindow);
+        // marker.addEventListener('click',function(){
+        //     marker.openInfoWindow(infoWindow);
+        // });
+        //
+        // var start = null;
+        // var end = "文澜路99号";
+        //
+        // $("#car").click(function(){
+        //     start = document.getElementById("start").innerText;
+        //     map.clearOverlays();
+        //     search(start,end,1);
+        //     function search(start,end,route){
+        //         var driving = new BMap.DrivingRoute(map, {renderOptions:{map: map, autoViewport: true},policy: route});
+        //         driving.search(start,end);
+        //     }
+        // });
+        // $("#bus").click(function(){
+        //     start = document.getElementById("start").innerText;
+        //     map.clearOverlays();
+        //     search(start, end, 1);
+        //     alert("555");
+        //     function search(start, end, route) {
+        //         transit.setPolicy(route);
+        //         transit.search(start, end);
+        //     }
+        // });
+    })
+</script>
+
+
+<div class="container-fluid foot text-center">Copyright © MeetConf - All Rights Reserved.</div>
+
+<!-- 回到顶部 -->
+<div id="toTop" class="toTopButton">
+    <i class="iconfont top-icon">&#xe62c;</i>
+</div>
+
+
+
+<!--modal-->
+<div class="modal fade" id="agendaModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class=" modal-dialog agenda-modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title agenda-title-modal" id="myModalLabel">智能机器人发布会</h4>
+            </div>
+            <div class="modal-body">
+                <div class="agenda-modal-body">
+                    <img src="img/guest1.jpg"/>
+                    <div class="agenda-detail-modal">
+                        <span class="agenda-des-modal">智能图书馆机器人发布与揭幕</span>
+                        <span class="agenda-date-modal">09:00-10:00</span>
+                        <span class="agenda-address-modal">南京大学仙林校区杜厦图书馆二楼大厅</span>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="agendaModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog agenda-modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title agenda-title-modal" id="myModalLabel">交流与研讨</h4>
+            </div>
+            <div class="modal-body">
+                <div class="agenda-modal-body">
+                    <img src="img/guest2.jpg">
+                    <div class="agenda-detail-modal">
+                        <span class="agenda-des-modal">智慧图书馆技术交流研讨</span>
+                        <span class="agenda-date-modal">10:00-12:00</span>
+                        <span class="agenda-address-modal">南京大学仙林校区杜厦图书馆报告厅</span>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="agendaModal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog agenda-modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title agenda-title-modal" id="myModalLabel">CADAL交流</h4>
+            </div>
+            <div class="modal-body">
+                <div class="agenda-modal-body">
+                    <img src="img/guest3.jpg"/>
+                    <div class="agenda-detail-modal">
+                        <span class="agenda-des-modal">CADAL服务与技术交流（报告厅）；盘点机器人现场交流（外文阅览室）</span>
+                        <span class="agenda-date-modal">13:30-16:00</span>
+                        <span class="agenda-address-modal">南京大学仙林校区杜厦图书馆报告厅</span>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="agendaModal4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog agenda-modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title agenda-title-modal" id="myModalLabel">CADAL交流</h4>
+            </div>
+            <div class="modal-body">
+                <div class="agenda-modal-body">
+                    <img src="img/guest4.jpg"/>
+                    <div class="agenda-detail-modal">
+                        <span class="agenda-des-modal">CADAL服务与技术交流（报告厅）；盘点机器人现场交流（外文阅览室）</span>
+                        <span class="agenda-date-modal">13:30-16:00</span>
+                        <span class="agenda-address-modal">南京大学仙林校区杜厦图书馆报告厅</span>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="guestModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog guest-modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title agenda-title-modal" id="myModalLabel">嘉宾</h4>
+            </div>
+            <div class="modal-body">
+                <div class="guest-modal-body">
+                    <div class="guest-modal-img "><img src="img/guest1.jpg"></div>
+                    <div class="guest-info-modal ">
+                        <h4 class="guest-name-modal" id="myModalLabel">陈力军</h4>
+                        <span class="guest-position-modal ">智能机器人超高频RFlD图书馆系统</span>
+                        <p class="guest-q-modal">陈力军教授是南京大学计算机科学与技术系、南京大学计算机软件新技术国家重点实验室教授，博士生导师，江苏省物联网测试与验证技术中心主任、江苏省计算机学会网络与分布计算专业委员会副主任委员。主要研究领域为泛在网络技术。陈力军教授在IEEE Transactions on Mobile Computing和INFOCOM等国际一流学术期刊和一流学术会议上发表相关论文60余篇。</p>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="guestModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog guest-modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title agenda-title-modal" id="myModalLabel">嘉宾</h4>
+            </div>
+            <div class="modal-body">
+                <div class="guest-modal-body">
+                    <div class="guest-modal-img "><img src="img/guest2.jpg"></div>
+                    <div class="guest-info-modal ">
+                        <h4 class="guest-name-modal" id="myModalLabel">张甲</h4>
+                        <span class="guest-position-modal ">面向服务的图书馆技术发展</span>
+                        <p class="guest-q-modal">北京大学图书馆学系学士，美国宾夕法尼亚州可莱仁大学图书情报学院硕士，加州大学伯克利分校信息管理学院博士课程。 香港中文大学（深圳）图书馆馆长，曾任上海科技大学图书信息中心主任（2013-15），之前在美国霍普金斯大学，斯坦福大学，Dialog 等机构组织工作近30年。 长期从事信息技术和图书馆自动化的开发，研究和管理工作。曾参加国内第一代大学图书馆自动化系统的研发，并为国内几家主要图书馆提供系统选择的建议。自1994年以来，定期组织国外学者回国讲学交流。2004年参与发起并组织第一届数字图书馆前沿问题高级研讨班，延续至今。担任过清华大学数字图书馆研究所顾问, 《数字图书馆论坛》编辑部顾问，浙江大学信息资源管理研究所兼职研究员，北京师范大学图书馆数字图书馆研究所顾问，上海交通大学和江苏大学客座研究员。目前担任中图学会图书馆建筑和设备专业委员会委员，和深圳图书情报学会常务理事。 承担过的咨询项目有Sirsi公司中国项目，Exlibris公司中国项目，新加坡国家图书馆局多语种系统项目，中国国家图书馆，北京大学和北京师范大学图书馆自动化系统选型项目等。</p>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="guestModal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog guest-modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title agenda-title-modal" id="myModalLabel">嘉宾</h4>
+            </div>
+            <div class="modal-body">
+                <div class="guest-modal-body">
+                    <div class="guest-modal-img "><img src="img/guest3.jpg"></div>
+                    <div class="guest-info-modal ">
+                        <h4 class="modal-title guest-name-modal" id="myModalLabel">黄晨</h4>
+                        <span class="modal-title  guest-position-modal">基于CADAL的共享与实践</span>
+                        <p class="guest-q-modal">黄晨，浙江大学CADAL管理中心副主任。浙江大学图书馆副馆长，研究馆员。同济大学工民建专业毕业，浙江大学历史学硕士。2009年起任浙江大学图书馆副馆长，兼任“高等学校中美图书国际合作数字化计划（CADAL）”项目管理中心秘书长、副主任；中图学会数字图书馆分委会委员等 。主要致力于数字图书馆规划与建设，主持和参与国家“863”计划、“科技支撑计划”、自然科学基金等项目多项，获浙江省科技进步一等奖一项，软件著作权6项；发表专著两部，学术论文30余篇。</p>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="guestModal4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog guest-modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title agenda-title-modal" id="myModalLabel">嘉宾</h4>
+            </div>
+            <div class="modal-body">
+                <div class="guest-modal-body">
+                    <div class="guest-modal-img "><img src="img/guest3.jpg"></div>
+                    <div class="guest-info-modal ">
+                        <h4 class="modal-title guest-name-modal" id="myModalLabel">樊慧丽</h4>
+                        <span class="guest-position-modal ">江苏省地区中心CADAL项目资源与服务推广</span>
+                        <p class="guest-q-modal">馆员，南京大学图书馆，江苏省地区中心CADAL项目资源与服务中心。</p>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="qualifiModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog qualifi-modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title agenda-title-modal" id="myModalLabel">会务组</h4>
+            </div>
+            <div class="modal-body">
+                <div class="qualifi-modal-body">
+                    <div class="qualifi-modal-img "><img src="img/rlogo-1.jpg"></div>
+                    <div class="qualifi-info-modal ">
+                        <h4 class="modal-title qualifi-name-modal" id="myModalLabel">南京大学</h4>
+                        <span class="qualifi-position-modal ">官网：<a target="_blank" href="https://www.nju.edu.cn/">https://www.nju.edu.cn/</a></span>
+                        <p class="qualifi-q-modal">南京大学坐落于钟灵毓秀、虎踞龙蟠的金陵古都，是一所历史悠久、声誉卓著的百年名校。其前身是创建于1902年的三江师范学堂，此后历经两江师范学堂、南京高等师范学校、国立东南大学、第四中山大学、国立中央大学、国立南京大学等历史时期，于1950年更名为南京大学。1952年，在全国高校院系调整中，南京大学调整出工学、农学、师范等部分院系后与创办于1888年的金陵大学文、理学院等合并，仍名南京大学。校址从四牌楼迁至鼓楼金大原址。</p>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="qualifiModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog qualifi-modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title agenda-title-modal" id="myModalLabel">会务组</h4>
+            </div>
+            <div class="modal-body">
+                <div class="qualifi-modal-body">
+                    <div class="qualifi-modal-img "><img src="img/rlogo-2.jpg"></div>
+                    <div class="qualifi-info-modal ">
+                        <h4 class="modal-title qualifi-name-modal" id="myModalLabel">东南大学</h4>
+                        <span class="qualifi-position-modal ">官网：<a target="_blank" href="http://www.seu.edu.cn/">http://www.seu.edu.cn/</a></span>
+                        <p class="qualifi-q-modal">东南大学是中央直管、教育部直属的全国重点大学，是“985工程”和“211工程”重点建设的大学之一，2017年进入一流大学建设高校A类名单。学校坐落于历史文化名城南京，占地面积5888亩，建有四牌楼、九龙湖、丁家桥等校区。</p>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="qualifiModal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog qualifi-modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title agenda-title-modal" id="myModalLabel">会务组</h4>
+            </div>
+            <div class="modal-body">
+                <div class="qualifi-modal-body">
+                    <div class="qualifi-modal-img "><img src="img/rlogo-3.jpg"></div>
+                    <div class="qualifi-info-modal ">
+                        <h4 class="modal-title qualifi-name-modal" id="myModalLabel">南京土拨鼠信息科技有限公司</h4>
+                        <span class="qualifi-position-modal ">官网：<a target="_blank" href="http://www.tbs-data.com/">http://www.tbs-data.com/</a></span>
+                        <p class="qualifi-q-modal">南京土拨鼠信息科技有限公司(TBS)成立于2012年,主要业务为移动互联网垂直方案的开发和运营。TBS以互联网数据采集和自动分析为特色,逐步形成了涵盖互联网前端,可扩展快速部署后台等完整的系统交付能力。TBS团队拥有一支较高素质的开发和管理团队,与南京的数所知名高校形成紧密的合作关系。在人工智能以及机器学习技术不断演进的今天,TBS与最新技术保持同步,持续研发包括 TBS-IWOM, TBS-WC, TBS-LIS 等数据分析和推广平台, 为客户在迅捷发展的移动互联时代提供一流的数据分析以及运营服务。</p>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="qualifiModal4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog qualifi-modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title agenda-title-modal" id="myModalLabel">会务组</h4>
+            </div>
+            <div class="modal-body">
+                <div class="qualifi-modal-body">
+                    <div class="qualifi-modal-img "><img src="img/rlogo-4.jpg"></div>
+                    <div class="qualifi-info-modal ">
+                        <h4 class="modal-title qualifi-name-modal" id="myModalLabel">南京土拨鼠信息科技有限公司</h4>
+                        <span class="qualifi-position-modal ">官网：<a target="_blank" href="http://www.tbs-data.com/">http://www.tbs-data.com/</a></span>
+                        <p class="qualifi-q-modal">南京土拨鼠信息科技有限公司(TBS)成立于2012年,主要业务为移动互联网垂直方案的开发和运营。TBS以互联网数据采集和自动分析为特色,逐步形成了涵盖互联网前端,可扩展快速部署后台等完整的系统交付能力。TBS团队拥有一支较高素质的开发和管理团队,与南京的数所知名高校形成紧密的合作关系。在人工智能以及机器学习技术不断演进的今天,TBS与最新技术保持同步,持续研发包括 TBS-IWOM, TBS-WC, TBS-LIS 等数据分析和推广平台, 为客户在迅捷发展的移动互联时代提供一流的数据分析以及运营服务。</p>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="qualifiModal5" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog qualifi-modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title agenda-title-modal" id="myModalLabel">会务组</h4>
+            </div>
+            <div class="modal-body">
+                <div class="qualifi-modal-body">
+                    <div class="qualifi-modal-img "><img src="img/rlogo-5.jpg"></div>
+                    <div class="qualifi-info-modal ">
+                        <h4 class="modal-title qualifi-name-modal" id="myModalLabel">南京大学</h4>
+                        <span class="qualifi-position-modal ">官网：<a target="_blank" href="https://www.nju.edu.cn/">https://www.nju.edu.cn/</a></span>
+                        <p class="qualifi-q-modal">南京大学坐落于钟灵毓秀、虎踞龙蟠的金陵古都，是一所历史悠久、声誉卓著的百年名校。其前身是创建于1902年的三江师范学堂，此后历经两江师范学堂、南京高等师范学校、国立东南大学、第四中山大学、国立中央大学、国立南京大学等历史时期，于1950年更名为南京大学。1952年，在全国高校院系调整中，南京大学调整出工学、农学、师范等部分院系后与创办于1888年的金陵大学文、理学院等合并，仍名南京大学。校址从四牌楼迁至鼓楼金大原址。</p>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="qualifiModal6" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog qualifi-modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title agenda-title-modal" id="myModalLabel">交流与研讨</h4>
+            </div>
+            <div class="modal-body">
+                <div class="qualifi-modal-body">
+                    <div class="qualifi-modal-img "><img src="img/rlogo-6.jpg"></div>
+                    <div class="qualifi-info-modal ">
+                        <h4 class="modal-title qualifi-name-modal" id="myModalLabel">南京大学</h4>
+                        <span class="qualifi-position-modal ">官网：<a target="_blank" href="https://www.nju.edu.cn/">https://www.nju.edu.cn/</a></span>
+                        <p class="qualifi-q-modal">南京大学坐落于钟灵毓秀、虎踞龙蟠的金陵古都，是一所历史悠久、声誉卓著的百年名校。其前身是创建于1902年的三江师范学堂，此后历经两江师范学堂、南京高等师范学校、国立东南大学、第四中山大学、国立中央大学、国立南京大学等历史时期，于1950年更名为南京大学。1952年，在全国高校院系调整中，南京大学调整出工学、农学、师范等部分院系后与创办于1888年的金陵大学文、理学院等合并，仍名南京大学。校址从四牌楼迁至鼓楼金大原址。</p>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+
+
+
+</html>

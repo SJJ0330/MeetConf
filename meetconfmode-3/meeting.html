@@ -1,0 +1,982 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>会议</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/icons.css">
+    <!-- <link rel="stylesheet" href="css/idangerous.swiper.css"> -->
+    <link rel="stylesheet" href="css/meeting.css">
+    <!-- 避免IE使用兼容模式 -->
+    <!--<meta http-equiv="X-UA-Compatible" content="IE=edge">-->
+    <meta name="renderer" content="webkit">
+    <script src="js/jquery-3.2.1.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <!-- <script src="js/idangerous.swiper2.7.6.min.js"></script> -->
+    <script src="js/meeting.js"></script>
+
+    <!--百度地图API-->
+    <!-- 密匙6lbr4qZ7nKyPo4bwGFguvFnbr4WTbgWt -->
+    <link rel="stylesheet" href="css/meeting.css">
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=3.0&ak=6lbr4qZ7nKyPo4bwGFguvFnbr4WTbgWt"></script>
+    <script src='https://api.map.baidu.com/library/SearchInfoWindow/1.5/src/SearchInfoWindow_min.js' type='text/javascript'></script>
+
+</head>
+<body>
+    
+    <div class="main-container">
+        <!-- header -->
+        <header>
+            <div class="container-fluid header-bg">
+                <div class="header-title">
+                    <h1>2018中国网络安全大会</h1>
+                    <h4>
+                        <div class="meeting-time">2018-06-13</div>
+                        <div class="meeting-location">北京-国家会议中心</div>
+                    </h4>
+                </div>
+            </div>
+        </header>
+
+        <!-- 会议信息 -->
+        <div class="m-content-wrapper">
+            <div class="container activityInfo">
+                <div class="row">
+                    <!-- 活动信息-图片 -->
+                    <div class="flex-center img-wrapper hidden-xs col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                        <div class="m-add">
+                            <img class="img-responsive" src="img/image-5-thumb.jpg">
+                        </div>
+                        <!-- <div class="img-caption">
+                            <h2 class="caption-text">中国网络安全大会
+                                <br> 北京
+                            </h2>
+                        </div> -->
+                        <a class="btn">立即注册</a>
+                    </div>
+
+                    <!-- 活动信息-图片 -->
+                    <div class="visible-xs bgImg" style="background-image: url('img/image-5-thumb.jpg')">
+                        <div class="img-caption">
+                            <h4 class="caption-text">中国网络安全大会
+                                <br> 北京
+                            </h4>
+                        </div>
+                    </div>
+                    <!-- 活动信息 -->
+                    <div class="padding-left col-xs-12 col-sm-8 col-md-8 col-lg-8">
+                        <!-- <h2>活动信息</h2> -->
+                        <div class="event-heading">
+                            <div class="heading-inner">
+                                <h2>活动信息</h2>
+                            </div>
+                        </div>
+                        <p>中国网络安全大会是在国家相关部委的指导下，由赛可达实验室联合百家国内外众多具有影响力的行业联盟协会、机构共同主办的年度综合性行业会议，从2013年至今已成功举办五届。大会以“全球视野下的网络安全”为永久主题，旨在引入并借鉴国际信息安全领域最前沿的防护理念与技术成果，洞悉交流全球信息安全最新发展趋势，聚焦探讨信息安全技术与应用热点话题，与国际安全创新防护理念同步，从而推动我国网络安全保障体系建设，提升国家重点行业网络安全防护水平。
+                        </p>
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-4 col-md-4 col-md-4">
+                                <h5 class="color-1">时间:</h5>
+                            </div>
+                            <div class="col-xs-12 col-sm-8 col-md-8 col-md-8">
+                                <h5>2018-06-13</h5>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-4 col-md-4 col-md-4">
+                                <h5 class="color-1">地点:</h5>    
+                            </div>
+                            <div class="col-xs-12 col-sm-8 col-md-8 col-md-8">
+                                <h5>北京国家会议中心</h5>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-4 col-md-4 col-md-4">
+                                <h5 class="color-1">总座位数:</h5>
+                            </div>
+                            <div class="col-xs-12 col-sm-8 col-md-8 col-md-8">
+                                <h5>120</h5>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-4 col-md-4 col-md-4">
+                                <h5 class="color-1">演讲者:</h5>
+                            </div>
+                            <div class="col-xs-12 col-sm-8 col-md-8 col-md-8">
+                                <h5>12位专家学者</h5>
+                            </div>
+                        </div>
+                        <div class="visible-xs row">
+                            <div class="flex-center col-xs-12 col-sm-4 col-md-4 col-md-4">
+                                <a class="btn">立即注册</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+      
+        <!-- 会议日程 -->
+        <div class="m-content-wrapper">
+            <div class="container eventShedule">
+                <div class="event-heading">
+                    <div class="heading-inner">
+                        <h2>活动日程</h2>
+                    </div>
+                </div>
+
+                <!-- 会议日期 -->
+                <div class="resp-tabs">
+                    <ul class="resp-tabs-list">
+                        <li class="resp-tabs-item resp-tabs-active" data-a="day-1">
+                            <h4 class="time-1">第一天</h4>
+                            <h4 class="time-2">2017-11-18</h4>
+                        </li>
+                        <li class="resp-tabs-item" data-a="day-2">
+                            <h4 class="time-1">第二天</h4>
+                            <h4 class="time-2">2017-11-19</h4>
+                        </li>
+                        <li class="resp-tabs-item" data-a="day-3">
+                            <h4 class="time-1">第三天</h4>
+                            <h4 class="time-2">2017-11-20</h4>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- 会议流程 1-->
+                <div class="meeting-agenda-container" data-b="day-1">
+                    <div>
+                        <div class="row agenda-content">
+                            <div class="hidden-xs  col-sm-2 col-md-2 col-lg-2">
+                                <div class="left-circle"></div>
+                            </div>
+                            <div class="col-xs-12 col-sm-10 col-md-10 col-lg-10">
+                                <div class="content-text">
+                                    <div class="left">
+                                        <div class="m-time">
+                                            <i class="iconfont">&#xe63b;</i>
+                                            <span>09:00 - 10:30</span>
+                                        </div>
+                                        <div class="m-room">
+                                            <i class="iconfont">&#xe620;</i>
+                                            <span>中心会议室</span>
+                                        </div>
+                                        <div class="m-speaker">
+                                            <i class="iconfont">&#xe736;</i>
+                                            <span class="speakers">演讲者</span>
+                                        </div>
+                                        <ul class="speakers-img">
+                                            <li>
+                                                <img src="img/speaker-1-200x200.jpg" alt="">
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="right">
+                                        <h3 class="m-title">云安全和电商安全</h3>
+                                        <p class="m-text">汇聚顶尖互联网企业、云服务提供商、电商、网络安全厂商的安全大伽，聚焦公有云、私有云和电商面临的安全新威胁、新技术，展示相关的安全解决方案与实践案例。汇聚顶尖互联网企业、云服务提供商、电商、网络安全厂商的安全大伽，聚焦公有云、私有云和电商面临的安全新威胁、新技术，展示相关的安全解决方案与实践案例。汇聚顶尖互联网企业、云服务提供商、电商、网络安全厂商的安全大伽，聚焦公有云、私有云和电商面临的安全新威胁、新技术，展示相关的安全解决方案与实践案例。
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row agenda-content">
+                            <div class="hidden-xs  col-sm-2 col-md-2 col-lg-2">
+                                <div class="left-circle"></div>
+                            </div>
+                            <div class="col-xs-12 col-sm-10 col-md-10 col-lg-10">
+                                <div class="content-text">
+                                    <div class="left">
+                                        <div class="m-time">
+                                            <i class="iconfont">&#xe63b;</i>
+                                            <span>10:50 - 11:40</span>
+                                        </div>
+                                        <div class="m-room">
+                                            <i class="iconfont">&#xe620;</i>
+                                            <span>中心会议室</span>
+                                        </div>
+                                        <div class="m-speaker">
+                                            <i class="iconfont">&#xe736;</i>
+                                            <span class="speakers">演讲者</span>
+                                        </div>
+                                        <ul class="speakers-img">
+                                            <li>
+                                                <img src="img/speaker-3-200x200.jpg" alt="">
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="right">
+                                        <h3 class="m-title">云安全和电商安全</h3>
+                                        <p class="m-text">汇聚顶尖互联网企业、云服务提供商、电商、网络安全厂商的安全大伽，聚焦公有云、私有云和电商面临的安全新威胁、新技术，展示相关的安全解决方案与实践案例。汇聚顶尖互联网企业、云服务提供商、电商、网络安全厂商的安全大伽，聚焦公有云、私有云和电商面临的安全新威胁、新技术，展示相关的安全解决方案与实践案例。汇聚顶尖互联网企业、云服务提供商、电商、网络安全厂商的安全大伽，聚焦公有云、私有云和电商面临的安全新威胁、新技术，展示相关的安全解决方案与实践案例。
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row agenda-content">
+                            <div class="hidden-xs  col-sm-2 col-md-2 col-lg-2">
+                                <div class="m-left-circle"></div>
+                            </div>
+                            <div class="col-xs-12 col-sm-10 col-md-10 col-lg-10">
+                                <div class="content-text">
+                                    <div class="left">
+                                        <div class="m-time">
+                                            <i class="iconfont">&#xe63b;</i>
+                                            <span>12:30</span>
+                                        </div>
+                                        <div class="m-room">
+                                            <i class="iconfont">&#xe620;</i>
+                                            <span>餐厅</span>
+                                        </div>
+                                    </div>
+                                    <div class="right">
+                                        <h3 class="m-title">午餐</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row agenda-content">
+                            <div class="hidden-xs  col-sm-2 col-md-2 col-lg-2">
+                                <div class="left-circle"></div>
+                            </div>
+                            <div class="col-xs-12 col-sm-10 col-md-10 col-lg-10">
+                                <div class="content-text">
+                                    <div class="left">
+                                        <div class="m-time">
+                                            <i class="iconfont">&#xe63b;</i>
+                                            <span>14:00 - 15:30</span>
+                                        </div>
+                                        <div class="m-room">
+                                            <i class="iconfont">&#xe620;</i>
+                                            <span>中心会议室</span>
+                                        </div>
+                                        <div class="m-speaker">
+                                            <i class="iconfont">&#xe736;</i>
+                                            <span class="speakers">演讲者</span>
+                                        </div>
+                                        <ul class="speakers-img">
+                                            <li>
+                                                <img src="img/speaker-5-200x200.jpg" alt="">
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="right">
+                                        <h3 class="m-title">云安全和电商安全</h3>
+                                        <p class="m-text">汇聚顶尖互联网企业、云服务提供商、电商、网络安全厂商的安全大伽，聚焦公有云、私有云和电商面临的安全新威胁、新技术，展示相关的安全解决方案与实践案例。汇聚顶尖互联网企业、云服务提供商、电商、网络安全厂商的安全大伽，聚焦公有云、私有云和电商面临的安全新威胁、新技术，展示相关的安全解决方案与实践案例。汇聚顶尖互联网企业、云服务提供商、电商、网络安全厂商的安全大伽，聚焦公有云、私有云和电商面临的安全新威胁、新技术，展示相关的安全解决方案与实践案例。
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row agenda-content">
+                            <div class="hidden-xs  col-sm-2 col-md-2 col-lg-2">
+                                <div class="left-circle"></div>
+                            </div>
+                            <div class="col-xs-12 col-sm-10 col-md-10 col-lg-10">
+                                <div class="content-text">
+                                    <div class="left">
+                                        <div class="m-time">
+                                            <i class="iconfont">&#xe63b;</i>
+                                            <span>16:00 - 17:30</span>
+                                        </div>
+                                        <div class="m-room">
+                                            <i class="iconfont">&#xe620;</i>
+                                            <span>中心会议室</span>
+                                        </div>
+                                        <div class="m-speaker">
+                                            <i class="iconfont">&#xe736;</i>
+                                            <span class="speakers">演讲者</span>
+                                        </div>
+                                        <ul class="speakers-img">
+                                            <li>
+                                                <img src="img/speaker-7-200x200.jpg" alt="">
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="right">
+                                        <h3 class="m-title">云安全和电商安全</h3>
+                                        <p class="m-text">汇聚顶尖互联网企业、云服务提供商、电商、网络安全厂商的安全大伽，聚焦公有云、私有云和电商面临的安全新威胁、新技术，展示相关的安全解决方案与实践案例。汇聚顶尖互联网企业、云服务提供商、电商、网络安全厂商的安全大伽，聚焦公有云、私有云和电商面临的安全新威胁、新技术，展示相关的安全解决方案与实践案例。汇聚顶尖互联网企业、云服务提供商、电商、网络安全厂商的安全大伽，聚焦公有云、私有云和电商面临的安全新威胁、新技术，展示相关的安全解决方案与实践案例。
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row agenda-content">
+                            <div class="hidden-xs  col-sm-2 col-md-2 col-lg-2">
+                                <div class="m-left-circle"></div>
+                            </div>
+                            <div class="col-xs-12 col-sm-10 col-md-10 col-lg-10">
+                                <div class="content-text">
+                                    <div class="left">
+                                        <div class="m-time">
+                                            <i class="iconfont">&#xe63b;</i>
+                                            <span>19:30</span>
+                                        </div>
+                                        <div class="m-room">
+                                            <i class="iconfont">&#xe620;</i>
+                                            <span>餐厅</span>
+                                        </div>
+                                    </div>
+                                    <div class="right">
+                                        <h3 class="m-title">晚餐</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>    
+                <!-- 会议流程 2-->
+                <div class="meeting-agenda-container" data-b="day-2">
+                        <div>
+                            <div class="row agenda-content">
+                                <div class="hidden-xs  col-sm-2 col-md-2 col-lg-2">
+                                    <div class="left-circle"></div>
+                                </div>
+                                <div class="col-xs-12 col-sm-10 col-md-10 col-lg-10">
+                                    <div class="content-text">
+                                        <div class="left">
+                                            <div class="m-time">
+                                                <i class="iconfont">&#xe63b;</i>
+                                                <span>09:00 - 10:30</span>
+                                            </div>
+                                            <div class="m-room">
+                                                <i class="iconfont">&#xe620;</i>
+                                                <span>中心会议室</span>
+                                            </div>
+                                            <div class="m-speaker">
+                                                <i class="iconfont">&#xe736;</i>
+                                                <span class="speakers">演讲者</span>
+                                            </div>
+                                            <ul class="speakers-img">
+                                                <li>
+                                                    <img src="img/speaker-2-200x200.jpg" alt="">
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="right">
+                                            <h3 class="m-title">云安全和电商安全</h3>
+                                            <p class="m-text">汇聚顶尖互联网企业、云服务提供商、电商、网络安全厂商的安全大伽，聚焦公有云、私有云和电商面临的安全新威胁、新技术，展示相关的安全解决方案与实践案例。汇聚顶尖互联网企业、云服务提供商、电商、网络安全厂商的安全大伽，聚焦公有云、私有云和电商面临的安全新威胁、新技术，展示相关的安全解决方案与实践案例。汇聚顶尖互联网企业、云服务提供商、电商、网络安全厂商的安全大伽，聚焦公有云、私有云和电商面临的安全新威胁、新技术，展示相关的安全解决方案与实践案例。
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row agenda-content">
+                                <div class="hidden-xs  col-sm-2 col-md-2 col-lg-2">
+                                    <div class="left-circle"></div>
+                                </div>
+                                <div class="col-xs-12 col-sm-10 col-md-10 col-lg-10">
+                                    <div class="content-text">
+                                        <div class="left">
+                                            <div class="m-time">
+                                                <i class="iconfont">&#xe63b;</i>
+                                                <span>10:50 - 11:40</span>
+                                            </div>
+                                            <div class="m-room">
+                                                <i class="iconfont">&#xe620;</i>
+                                                <span>中心会议室</span>
+                                            </div>
+                                            <div class="m-speaker">
+                                                <i class="iconfont">&#xe736;</i>
+                                                <span class="speakers">演讲者</span>
+                                            </div>
+                                            <ul class="speakers-img">
+                                                <li>
+                                                    <img src="img/speaker-3-200x200.jpg" alt="">
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="right">
+                                            <h3 class="m-title">云安全和电商安全</h3>
+                                            <p class="m-text">汇聚顶尖互联网企业、云服务提供商、电商、网络安全厂商的安全大伽，聚焦公有云、私有云和电商面临的安全新威胁、新技术，展示相关的安全解决方案与实践案例。汇聚顶尖互联网企业、云服务提供商、电商、网络安全厂商的安全大伽，聚焦公有云、私有云和电商面临的安全新威胁、新技术，展示相关的安全解决方案与实践案例。汇聚顶尖互联网企业、云服务提供商、电商、网络安全厂商的安全大伽，聚焦公有云、私有云和电商面临的安全新威胁、新技术，展示相关的安全解决方案与实践案例。
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row agenda-content">
+                                <div class="hidden-xs  col-sm-2 col-md-2 col-lg-2">
+                                    <div class="m-left-circle"></div>
+                                </div>
+                                <div class="col-xs-12 col-sm-10 col-md-10 col-lg-10">
+                                    <div class="content-text">
+                                        <div class="left">
+                                            <div class="m-time">
+                                                <i class="iconfont">&#xe63b;</i>
+                                                <span>12:30</span>
+                                            </div>
+                                            <div class="m-room">
+                                                <i class="iconfont">&#xe620;</i>
+                                                <span>餐厅</span>
+                                            </div>
+                                        </div>
+                                        <div class="right">
+                                            <h3 class="m-title">午餐</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row agenda-content">
+                                <div class="hidden-xs  col-sm-2 col-md-2 col-lg-2">
+                                    <div class="left-circle"></div>
+                                </div>
+                                <div class="col-xs-12 col-sm-10 col-md-10 col-lg-10">
+                                    <div class="content-text">
+                                        <div class="left">
+                                            <div class="m-time">
+                                                <i class="iconfont">&#xe63b;</i>
+                                                <span>14:00 - 15:30</span>
+                                            </div>
+                                            <div class="m-room">
+                                                <i class="iconfont">&#xe620;</i>
+                                                <span>中心会议室</span>
+                                            </div>
+                                            <div class="m-speaker">
+                                                <i class="iconfont">&#xe736;</i>
+                                                <span class="speakers">演讲者</span>
+                                            </div>
+                                            <ul class="speakers-img">
+                                                <li>
+                                                    <img src="img/speaker-5-200x200.jpg" alt="">
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="right">
+                                            <h3 class="m-title">云安全和电商安全</h3>
+                                            <p class="m-text">汇聚顶尖互联网企业、云服务提供商、电商、网络安全厂商的安全大伽，聚焦公有云、私有云和电商面临的安全新威胁、新技术，展示相关的安全解决方案与实践案例。汇聚顶尖互联网企业、云服务提供商、电商、网络安全厂商的安全大伽，聚焦公有云、私有云和电商面临的安全新威胁、新技术，展示相关的安全解决方案与实践案例。汇聚顶尖互联网企业、云服务提供商、电商、网络安全厂商的安全大伽，聚焦公有云、私有云和电商面临的安全新威胁、新技术，展示相关的安全解决方案与实践案例。
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row agenda-content">
+                                <div class="hidden-xs  col-sm-2 col-md-2 col-lg-2">
+                                    <div class="left-circle"></div>
+                                </div>
+                                <div class="col-xs-12 col-sm-10 col-md-10 col-lg-10">
+                                    <div class="content-text">
+                                        <div class="left">
+                                            <div class="m-time">
+                                                <i class="iconfont">&#xe63b;</i>
+                                                <span>16:00 - 17:30</span>
+                                            </div>
+                                            <div class="m-room">
+                                                <i class="iconfont">&#xe620;</i>
+                                                <span>中心会议室</span>
+                                            </div>
+                                            <div class="m-speaker">
+                                                <i class="iconfont">&#xe736;</i>
+                                                <span class="speakers">演讲者</span>
+                                            </div>
+                                            <ul class="speakers-img">
+                                                <li>
+                                                    <img src="img/speaker-7-200x200.jpg" alt="">
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="right">
+                                            <h3 class="m-title">云安全和电商安全</h3>
+                                            <p class="m-text">汇聚顶尖互联网企业、云服务提供商、电商、网络安全厂商的安全大伽，聚焦公有云、私有云和电商面临的安全新威胁、新技术，展示相关的安全解决方案与实践案例。汇聚顶尖互联网企业、云服务提供商、电商、网络安全厂商的安全大伽，聚焦公有云、私有云和电商面临的安全新威胁、新技术，展示相关的安全解决方案与实践案例。汇聚顶尖互联网企业、云服务提供商、电商、网络安全厂商的安全大伽，聚焦公有云、私有云和电商面临的安全新威胁、新技术，展示相关的安全解决方案与实践案例。
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row agenda-content">
+                                <div class="hidden-xs  col-sm-2 col-md-2 col-lg-2">
+                                    <div class="m-left-circle"></div>
+                                </div>
+                                <div class="col-xs-12 col-sm-10 col-md-10 col-lg-10">
+                                    <div class="content-text">
+                                        <div class="left">
+                                            <div class="m-time">
+                                                <i class="iconfont">&#xe63b;</i>
+                                                <span>19:30</span>
+                                            </div>
+                                            <div class="m-room">
+                                                <i class="iconfont">&#xe620;</i>
+                                                <span>餐厅</span>
+                                            </div>
+                                        </div>
+                                        <div class="right">
+                                            <h3 class="m-title">晚餐</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+    
+                    </div>   
+                <!-- 会议流程 3-->
+                <div class="meeting-agenda-container" data-b="day-3">
+                        <div>
+                            <div class="row agenda-content">
+                                <div class="hidden-xs  col-sm-2 col-md-2 col-lg-2">
+                                    <div class="left-circle"></div>
+                                </div>
+                                <div class="col-xs-12 col-sm-10 col-md-10 col-lg-10">
+                                    <div class="content-text">
+                                        <div class="left">
+                                            <div class="m-time">
+                                                <i class="iconfont">&#xe63b;</i>
+                                                <span>09:00 - 10:30</span>
+                                            </div>
+                                            <div class="m-room">
+                                                <i class="iconfont">&#xe620;</i>
+                                                <span>中心会议室</span>
+                                            </div>
+                                            <div class="m-speaker">
+                                                <i class="iconfont">&#xe736;</i>
+                                                <span class="speakers">演讲者</span>
+                                            </div>
+                                            <ul class="speakers-img">
+                                                <li>
+                                                    <img src="img/speaker-3-200x200.jpg" alt="">
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="right">
+                                            <h3 class="m-title">云安全和电商安全</h3>
+                                            <p class="m-text">汇聚顶尖互联网企业、云服务提供商、电商、网络安全厂商的安全大伽，聚焦公有云、私有云和电商面临的安全新威胁、新技术，展示相关的安全解决方案与实践案例。汇聚顶尖互联网企业、云服务提供商、电商、网络安全厂商的安全大伽，聚焦公有云、私有云和电商面临的安全新威胁、新技术，展示相关的安全解决方案与实践案例。汇聚顶尖互联网企业、云服务提供商、电商、网络安全厂商的安全大伽，聚焦公有云、私有云和电商面临的安全新威胁、新技术，展示相关的安全解决方案与实践案例。
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row agenda-content">
+                                <div class="hidden-xs  col-sm-2 col-md-2 col-lg-2">
+                                    <div class="left-circle"></div>
+                                </div>
+                                <div class="col-xs-12 col-sm-10 col-md-10 col-lg-10">
+                                    <div class="content-text">
+                                        <div class="left">
+                                            <div class="m-time">
+                                                <i class="iconfont">&#xe63b;</i>
+                                                <span>10:50 - 11:40</span>
+                                            </div>
+                                            <div class="m-room">
+                                                <i class="iconfont">&#xe620;</i>
+                                                <span>中心会议室</span>
+                                            </div>
+                                            <div class="m-speaker">
+                                                <i class="iconfont">&#xe736;</i>
+                                                <span class="speakers">演讲者</span>
+                                            </div>
+                                            <ul class="speakers-img">
+                                                <li>
+                                                    <img src="img/speaker-3-200x200.jpg" alt="">
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="right">
+                                            <h3 class="m-title">云安全和电商安全</h3>
+                                            <p class="m-text">汇聚顶尖互联网企业、云服务提供商、电商、网络安全厂商的安全大伽，聚焦公有云、私有云和电商面临的安全新威胁、新技术，展示相关的安全解决方案与实践案例。汇聚顶尖互联网企业、云服务提供商、电商、网络安全厂商的安全大伽，聚焦公有云、私有云和电商面临的安全新威胁、新技术，展示相关的安全解决方案与实践案例。汇聚顶尖互联网企业、云服务提供商、电商、网络安全厂商的安全大伽，聚焦公有云、私有云和电商面临的安全新威胁、新技术，展示相关的安全解决方案与实践案例。
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row agenda-content">
+                                <div class="hidden-xs  col-sm-2 col-md-2 col-lg-2">
+                                    <div class="m-left-circle"></div>
+                                </div>
+                                <div class="col-xs-12 col-sm-10 col-md-10 col-lg-10">
+                                    <div class="content-text">
+                                        <div class="left">
+                                            <div class="m-time">
+                                                <i class="iconfont">&#xe63b;</i>
+                                                <span>12:30</span>
+                                            </div>
+                                            <div class="m-room">
+                                                <i class="iconfont">&#xe620;</i>
+                                                <span>餐厅</span>
+                                            </div>
+                                        </div>
+                                        <div class="right">
+                                            <h3 class="m-title">午餐</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row agenda-content">
+                                <div class="hidden-xs  col-sm-2 col-md-2 col-lg-2">
+                                    <div class="left-circle"></div>
+                                </div>
+                                <div class="col-xs-12 col-sm-10 col-md-10 col-lg-10">
+                                    <div class="content-text">
+                                        <div class="left">
+                                            <div class="m-time">
+                                                <i class="iconfont">&#xe63b;</i>
+                                                <span>14:00 - 15:30</span>
+                                            </div>
+                                            <div class="m-room">
+                                                <i class="iconfont">&#xe620;</i>
+                                                <span>中心会议室</span>
+                                            </div>
+                                            <div class="m-speaker">
+                                                <i class="iconfont">&#xe736;</i>
+                                                <span class="speakers">演讲者</span>
+                                            </div>
+                                            <ul class="speakers-img">
+                                                <li>
+                                                    <img src="img/speaker-5-200x200.jpg" alt="">
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="right">
+                                            <h3 class="m-title">云安全和电商安全</h3>
+                                            <p class="m-text">汇聚顶尖互联网企业、云服务提供商、电商、网络安全厂商的安全大伽，聚焦公有云、私有云和电商面临的安全新威胁、新技术，展示相关的安全解决方案与实践案例。汇聚顶尖互联网企业、云服务提供商、电商、网络安全厂商的安全大伽，聚焦公有云、私有云和电商面临的安全新威胁、新技术，展示相关的安全解决方案与实践案例。汇聚顶尖互联网企业、云服务提供商、电商、网络安全厂商的安全大伽，聚焦公有云、私有云和电商面临的安全新威胁、新技术，展示相关的安全解决方案与实践案例。
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row agenda-content">
+                                <div class="hidden-xs  col-sm-2 col-md-2 col-lg-2">
+                                    <div class="left-circle"></div>
+                                </div>
+                                <div class="col-xs-12 col-sm-10 col-md-10 col-lg-10">
+                                    <div class="content-text">
+                                        <div class="left">
+                                            <div class="m-time">
+                                                <i class="iconfont">&#xe63b;</i>
+                                                <span>16:00 - 17:30</span>
+                                            </div>
+                                            <div class="m-room">
+                                                <i class="iconfont">&#xe620;</i>
+                                                <span>中心会议室</span>
+                                            </div>
+                                            <div class="m-speaker">
+                                                <i class="iconfont">&#xe736;</i>
+                                                <span class="speakers">演讲者</span>
+                                            </div>
+                                            <ul class="speakers-img">
+                                                <li>
+                                                    <img src="img/speaker-7-200x200.jpg" alt="">
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="right">
+                                            <h3 class="m-title">云安全和电商安全</h3>
+                                            <p class="m-text">汇聚顶尖互联网企业、云服务提供商、电商、网络安全厂商的安全大伽，聚焦公有云、私有云和电商面临的安全新威胁、新技术，展示相关的安全解决方案与实践案例。汇聚顶尖互联网企业、云服务提供商、电商、网络安全厂商的安全大伽，聚焦公有云、私有云和电商面临的安全新威胁、新技术，展示相关的安全解决方案与实践案例。汇聚顶尖互联网企业、云服务提供商、电商、网络安全厂商的安全大伽，聚焦公有云、私有云和电商面临的安全新威胁、新技术，展示相关的安全解决方案与实践案例。
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row agenda-content">
+                                <div class="hidden-xs  col-sm-2 col-md-2 col-lg-2">
+                                    <div class="m-left-circle"></div>
+                                </div>
+                                <div class="col-xs-12 col-sm-10 col-md-10 col-lg-10">
+                                    <div class="content-text">
+                                        <div class="left">
+                                            <div class="m-time">
+                                                <i class="iconfont">&#xe63b;</i>
+                                                <span>19:30</span>
+                                            </div>
+                                            <div class="m-room">
+                                                <i class="iconfont">&#xe620;</i>
+                                                <span>餐厅</span>
+                                            </div>
+                                        </div>
+                                        <div class="right">
+                                            <h3 class="m-title">晚餐</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+    
+                    </div>
+                    
+            </div>
+        </div>
+
+        <!-- 会议新闻 -->
+        <div class="m-content-wrapper">
+            <div class="container news">
+                <!-- <div class="news-header">
+                    <h2>会议新闻</h2>
+                </div> -->
+                <div class="event-heading">
+                    <div class="heading-inner">
+                        <h2>会议新闻</h2>
+                    </div>
+                </div>
+
+                <div class="news-content">
+                    <div class="row">
+                        <div class="hidden-xs col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                            <ul>
+                                <li class="news-title news-title-active" data-a="title-1"><span>化院本科生获“挑战杯”特等奖</span></li>
+                                <li class="news-title" data-a="title-2"><span>化院学子获第十届中国青少年科技创新奖</span></li>
+                                <li class="news-title" data-a="title-3"><span>化院学子获第十届中国青少年科技创新奖</span></li>
+                                <li class="news-title" data-a="title-4"><span>南京大学化学化工学院学生团队荣获全国“互联网+”最佳创新奖</span></li>
+                            </ul>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                            <!-- 新闻 1 -->
+                            <div class="text-content-wraper" data-b="title-1">
+                                <div class="text-content">
+                                    <div class="visible-xs hide-news-title">化院本科生获“挑战杯”特等奖</div>
+                                    <div class="m-collapse">
+                                        <div class="news-text">5月25日，学习交流团前往浙江大学化学实验教学中心参观交流。交流会由浙江大学基础化学实验教学中心主任王敏教授主持，书记雷鸣、副主任赵华绒、曾秀琼和王国平，以及实验课程负责人等19位教师与学习交流团10位成员进行交流研讨。双方分别介绍化学实验教学中心总体情况、近些年的实践教学改革思路，双方教师就实验课程设置、教学内容、分层次教学情况、实验师资队伍（特别是青年实验技术队伍）、研究生助教、实验室安全管理、安全文化建设、工作中面临的共同难点等主题进行广泛深入交流。随后学习交流团成员深入浙江大学化学实验教学中心实验室进行调研，并围绕实验室建设细节展开讨论。此次交流取得良好成效，促进了两校化学实验教学中心的相互了解，也为开展工作拓宽了思路。通过一整天的交流，双方受益匪浅，双方约定今后将进一步加强双边交流，适时开展实验教学研讨，为建设化学国家级实验教学示范中心协同努力。</div>
+                                        <a class="read-more" data-toggle="modal" data-target="#myModal-1">READ MORE</a>
+                                    </div>
+                                    
+                                </div>
+                                <!-- Modal -->
+                                <div class="modal fade" id="myModal-1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                                    <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                                <h4 class="modal-title m-modal-title" id="myModalLabel">化院本科生获“挑战杯”特等奖</h4>
+                                            </div>
+                                            <div class="modal-body">
+                                                <p>5月25日，学习交流团前往浙江大学化学实验教学中心参观交流。交流会由浙江大学基础化学实验教学中心主任王敏教授主持，书记雷鸣、副主任赵华绒、曾秀琼和王国平，以及实验课程负责人等19位教师与学习交流团10位成员进行交流研讨。双方分别介绍化学实验教学中心总体情况、近些年的实践教学改革思路，双方教师就实验课程设置、教学内容、分层次教学情况、实验师资队伍（特别是青年实验技术队伍）、研究生助教、实验室安全管理、安全文化建设、工作中面临的共同难点等主题进行广泛深入交流。随后学习交流团成员深入浙江大学化学实验教学中心实验室进行调研，并围绕实验室建设细节展开讨论。此次交流取得良好成效，促进了两校化学实验教学中心的相互了解，也为开展工作拓宽了思路。通过一整天的交流，双方受益匪浅，双方约定今后将进一步加强双边交流，适时开展实验教学研讨，为建设化学国家级实验教学示范中心协同努力。
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 新闻 2 -->
+                            <div class="m-hidden text-content-wraper" data-b="title-2">
+                                <div class="text-content">
+                                    <div class="visible-xs hide-news-title">化院本科生获“挑战杯”特等奖</div>
+                                    <div class="m-collapse">
+                                        <div class="news-text">5月26日，学习交流团前往浙江大学化学实验教学中心参观交流。交流会由浙江大学基础化学实验教学中心主任王敏教授主持，书记雷鸣、副主任赵华绒、曾秀琼和王国平，以及实验课程负责人等19位教师与学习交流团10位成员进行交流研讨。双方分别介绍化学实验教学中心总体情况、近些年的实践教学改革思路，双方教师就实验课程设置、教学内容、分层次教学情况、实验师资队伍（特别是青年实验技术队伍）、研究生助教、实验室安全管理、安全文化建设、工作中面临的共同难点等主题进行广泛深入交流。随后学习交流团成员深入浙江大学化学实验教学中心实验室进行调研，并围绕实验室建设细节展开讨论。此次交流取得良好成效，促进了两校化学实验教学中心的相互了解，也为开展工作拓宽了思路。通过一整天的交流，双方受益匪浅，双方约定今后将进一步加强双边交流，适时开展实验教学研讨，为建设化学国家级实验教学示范中心协同努力。</div>
+                                        <a class="read-more" data-toggle="modal" data-target="#myModal-2">READ MORE</a>
+                                    </div>
+                                    
+                                </div>
+                                <!-- Modal -->
+                                <div class="modal fade" id="myModal-2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                                        <div class="modal-dialog" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                        <span aria-hidden="true">&times;</span>
+                                                    </button>
+                                                    <h4 class="modal-title" id="myModalLabel">化院本科生获“挑战杯”特等奖</h4>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <p>5月25日，学习交流团前往浙江大学化学实验教学中心参观交流。交流会由浙江大学基础化学实验教学中心主任王敏教授主持，书记雷鸣、副主任赵华绒、曾秀琼和王国平，以及实验课程负责人等19位教师与学习交流团10位成员进行交流研讨。双方分别介绍化学实验教学中心总体情况、近些年的实践教学改革思路，双方教师就实验课程设置、教学内容、分层次教学情况、实验师资队伍（特别是青年实验技术队伍）、研究生助教、实验室安全管理、安全文化建设、工作中面临的共同难点等主题进行广泛深入交流。随后学习交流团成员深入浙江大学化学实验教学中心实验室进行调研，并围绕实验室建设细节展开讨论。此次交流取得良好成效，促进了两校化学实验教学中心的相互了解，也为开展工作拓宽了思路。通过一整天的交流，双方受益匪浅，双方约定今后将进一步加强双边交流，适时开展实验教学研讨，为建设化学国家级实验教学示范中心协同努力。
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                            </div>
+
+                            <!-- 新闻 3 -->
+                            <div class="m-hidden text-content-wraper" data-b="title-3">
+                                <div class="text-content">
+                                    <div class="visible-xs hide-news-title">化院学子获第十届中国青少年科技创新奖</div>
+                                    <div class="m-collapse">
+                                        <div class="news-text">5月27日，学习交流团前往浙江大学化学实验教学中心参观交流。交流会由浙江大学基础化学实验教学中心主任王敏教授主持，书记雷鸣、副主任赵华绒、曾秀琼和王国平，以及实验课程负责人等19位教师与学习交流团10位成员进行交流研讨。双方分别介绍化学实验教学中心总体情况、近些年的实践教学改革思路，双方教师就实验课程设置、教学内容、分层次教学情况、实验师资队伍（特别是青年实验技术队伍）、研究生助教、实验室安全管理、安全文化建设、工作中面临的共同难点等主题进行广泛深入交流。随后学习交流团成员深入浙江大学化学实验教学中心实验室进行调研，并围绕实验室建设细节展开讨论。此次交流取得良好成效，促进了两校化学实验教学中心的相互了解，也为开展工作拓宽了思路。通过一整天的交流，双方受益匪浅，双方约定今后将进一步加强双边交流，适时开展实验教学研讨，为建设化学国家级实验教学示范中心协同努力。</div>
+                                        <a class="read-more" data-toggle="modal" data-target="#myModal-3">READ MORE</a>
+                                    </div>
+                                    
+                                </div>
+                                <!-- Modal -->
+                                <div class="modal fade" id="myModal-3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                                    <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                                <h4 class="modal-title" id="myModalLabel">化院本科生获“挑战杯”特等奖</h4>
+                                            </div>
+                                            <div class="modal-body">
+                                                <p>5月25日，学习交流团前往浙江大学化学实验教学中心参观交流。交流会由浙江大学基础化学实验教学中心主任王敏教授主持，书记雷鸣、副主任赵华绒、曾秀琼和王国平，以及实验课程负责人等19位教师与学习交流团10位成员进行交流研讨。双方分别介绍化学实验教学中心总体情况、近些年的实践教学改革思路，双方教师就实验课程设置、教学内容、分层次教学情况、实验师资队伍（特别是青年实验技术队伍）、研究生助教、实验室安全管理、安全文化建设、工作中面临的共同难点等主题进行广泛深入交流。随后学习交流团成员深入浙江大学化学实验教学中心实验室进行调研，并围绕实验室建设细节展开讨论。此次交流取得良好成效，促进了两校化学实验教学中心的相互了解，也为开展工作拓宽了思路。通过一整天的交流，双方受益匪浅，双方约定今后将进一步加强双边交流，适时开展实验教学研讨，为建设化学国家级实验教学示范中心协同努力。
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 新闻 4 -->
+                            <div class="m-hidden text-content-wraper" data-b="title-4">
+                                <div class="text-content">
+                                    <div class="visible-xs hide-news-title" data->南京大学化学化工学院学生团队荣获全国“互联网+”最佳创新奖</div>
+                                    <div class="m-collapse">
+                                        <div class="news-text">5月28日，交流会由浙江大学基础化学实验教学中心主任王敏教授主持，书记雷鸣、副主任赵华绒、曾秀琼和王国平，以及实验课程负责人等19位教师与学习交流团10位成员进行交流研讨。双方分别介绍化学实验教学中心总体情况、近些年的实践教学改革思路，双方教师就实验课程设置、教学内容、分层次教学情况、实验师资队伍（特别是青年实验技术队伍）、研究生助教、实验室安全管理、安全文化建设、工作中面临的共同难点等主题进行广泛深入交流。随后学习交流团成员深入浙江大学化学实验教学中心实验室进行调研，并围绕实验室建设细节展开讨论。此次交流取得良好成效，促进了两校化学实验教学中心的相互了解，也为开展工作拓宽了思路。通过一整天的交流，双方受益匪浅，双方约定今后将进一步加强双边交流，适时开展实验教学研讨，为建设化学国家级实验教学示范中心协同努力。</div>
+                                        <a class="read-more" data-toggle="modal" data-target="#myModal-4">READ MORE</a>
+                                    </div>
+                                    
+                                </div>
+                                <!-- Modal -->
+                                <div class="modal fade" id="myModal-4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                                    <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                                <h4 class="modal-title" id="myModalLabel">化院本科生获“挑战杯”特等奖</h4>
+                                            </div>
+                                            <div class="modal-body">
+                                                <p>5月28日，交流会由浙江大学基础化学实验教学中心主任王敏教授主持，书记雷鸣、副主任赵华绒、曾秀琼和王国平，以及实验课程负责人等19位教师与学习交流团10位成员进行交流研讨。双方分别介绍化学实验教学中心总体情况、近些年的实践教学改革思路，双方教师就实验课程设置、教学内容、分层次教学情况、实验师资队伍（特别是青年实验技术队伍）、研究生助教、实验室安全管理、安全文化建设、工作中面临的共同难点等主题进行广泛深入交流。随后学习交流团成员深入浙江大学化学实验教学中心实验室进行调研，并围绕实验室建设细节展开讨论。此次交流取得良好成效，促进了两校化学实验教学中心的相互了解，也为开展工作拓宽了思路。通过一整天的交流，双方受益匪浅，双方约定今后将进一步加强双边交流，适时开展实验教学研讨，为建设化学国家级实验教学示范中心协同努力。
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+
+
+        
+                
+        
+        
+            </div>
+        </div>
+        
+        <!-- 演讲嘉宾 -->
+        <div class="m-content-wrapper">
+            <div class="container speakers">
+                <!-- <h2>演讲嘉宾</h2> -->
+                <div class="event-heading">
+                    <div class="heading-inner">
+                        <h2>演讲嘉宾</h2>
+                    </div>
+                </div>
+                <div class="row speakers-content">
+                    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                        <img src="img/speaker-1.jpg" alt="">
+                        <h4>大卫奥斯汀</h4>
+                        <h5>高级增强现实经理</h5>
+                        <p>为增强金融网络安全防御能力，有效应对金融行业所面临的网络安全挑战，来自金融信息化领域的领导和专家、企业专家，以及多家金融机构的信息安全负责人等，将就当前的金融信息安全所面临的问题以及解决方案进行深入探讨
+        
+                        </p>
+                    </div>
+                    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                        <img src="img/speaker-2.jpg" alt="">
+                        <h4>大卫奥斯汀</h4>
+                        <h5>高级增强现实经理</h5>
+                        <p>为增强金融网络安全防御能力，有效应对金融行业所面临的网络安全挑战，来自金融信息化领域的领导和专家、企业专家，以及多家金融机构的信息安全负责人等，将就当前的金融信息安全所面临的问题以及解决方案进行深入探讨
+        
+                        </p>
+                    </div>
+                    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                        <img src="img/speaker-3.jpg" alt="">
+                        <h4>大卫奥斯汀</h4>
+                        <h5>高级增强现实经理</h5>
+                        <p>为增强金融网络安全防御能力，有效应对金融行业所面临的网络安全挑战，来自金融信息化领域的领导和专家、企业专家，以及多家金融机构的信息安全负责人等，将就当前的金融信息安全所面临的问题以及解决方案进行深入探讨
+        
+                        </p>
+                    </div>
+                </div>
+        
+            </div>
+        </div>
+
+        <!-- Our generous sponsors -->
+        <div class="sponsors-wrapper">
+            <div class="container sponsors">
+                <!-- <h2>赞助商</h2> -->
+                <div class="event-heading">
+                    <div class="heading-inner">
+                        <h2>赞助商</h2>
+                    </div>
+                </div>
+                <div class="sponsors-logo">
+                    <div class="s-info">
+                        <img src="img/nd.jpg" alt="">
+                        <div class="s-name">南京大学</div>
+                    </div>
+                    <div class="s-info">
+                        <img src="img/nd.jpg" alt="">
+                        <div class="s-name">南京大学</div>
+                    </div>
+                    <div class="s-info">
+                        <img src="img/nd.jpg" alt="">
+                        <div class="s-name">南京大学</div>
+                    </div>
+                    <div class="s-info">
+                        <img src="img/nd.jpg" alt="">
+                        <div class="s-name">南京大学</div>
+                    </div>
+                    <div class="s-info">
+                        <img src="img/nd.jpg" alt="">
+                        <div class="s-name">南京大学</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- map -->
+        <div class="container-fluid map-container nav-doc" id="map-container"></div>
+        <!--百度地图API-->
+        <script>
+            $(function () {
+                // 初始化地图逻辑
+                // 首先创建地图实例，之后用一个Point坐标点和缩放级别来初始化地图。
+                // 创建地图实例
+                var map = new BMap.Map("map-container");
+                //  设置地图样式，通过百度地图提供的样式模板，选择地图样式
+                map.setMapStyle({ style: 'grayscale' });
+                
+                // 创建点坐标
+                var point = new BMap.Point(118.9069664, 32.1275042)
+                // 初始化地图，设置中心点坐标和地图级别
+                map.centerAndZoom(point, 12);
+                // 设置地图城市，注意当地图初始化时的类型设置为BMAP_PERSPECTIVE_MAP时，
+                // 需要在调用centerAndZoom之前调用此方法设置地图所在城市。
+                map.setCurrentCity("南京");
+                // 注意：初始化的坐标应与您设置的城市对应，否则地图将无法正常显示。
+                
+                // 禁用滚轮放大缩小。
+                // map.disableScrollWheelZoom();
+                $("#map-container").click(function () {
+                    // 开启鼠标滚轮缩放，默认禁用。
+                    map.enableScrollWheelZoom(true);
+                });
+                
+                var myIcon = new BMap.Icon("img/map-point3.png", new BMap.Size(32, 32), {
+                    // 指定定位位置
+                    offset: new BMap.Size(10, 25)
+                    // 当需要从一幅较大的图片中截取某部分作为标注图标时，需要指定大图的偏移位置
+                    // imageOffset: new BMap.Size(0, 0 - i * 25)
+                    // 设置图片偏移
+                });
+                var marker = new BMap.Marker(point, { icon: myIcon });
+                map.addOverlay(marker);
+            
+            })
+        </script>
+
+        <!-- footer -->
+        <div class="container-fluid footer">
+            <p>Copyright © MeetConf - All Rights Reserved.</p>
+        </div>
+
+        <!-- go to top -->
+        <div id="toTop" class="toTopButton" style="display: none">
+            <i class="iconfont top-icon">&#xe64e;</i>
+        </div>
+
+    </div>
+
+
+
+</body>
+</html>

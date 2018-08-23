@@ -1,0 +1,634 @@
+
+*{
+    font-family: "Microsoft YaHei" ! important;
+}
+
+
+
+
+.main-container{
+    width: 100%;
+    height: 100%;
+}
+
+                                                            /* ***** header ***** */
+
+.main-container .header-bg{
+    background-image: url(../img/hero-2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top left;
+    padding: 0;
+}
+.main-container .header-title{
+    margin-top: 200px;
+    margin-bottom: 220px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    text-align: center;
+    color: #fff;
+}
+.main-container .header-title h4 .margin-right{
+    margin-right: 20px;
+}
+.main-container .header-title h1{
+    margin-top: 35px;
+    letter-spacing: 2px;
+    font-size: 44px;
+    
+}
+@media(max-width:768px){
+    .main-container .header-title{
+        margin-top: 100px;
+        margin-bottom: 120px;
+        padding-top: 40px;
+        padding-bottom: 40px;
+        text-align: center;
+        color: #fff;
+    }
+    .main-container .header-title h4 span{
+        display: block;
+        margin-top: 20px;
+    }
+    .main-container .header-title h1{
+        font-size: 30px;
+        
+    }
+}
+
+
+.main-container .m-content-wrapper:nth-child(even){
+    padding: 80px 0;
+    background-color: #f2f2f2;
+}
+.main-container .m-content-wrapper:nth-child(odd){
+    padding: 80px 0;
+    background-color: #f9f9f9;
+}
+
+                                                    /* ***** 会议信息 ***** */
+.activityInfo .mm-img-wrapper{
+    position: relative;
+}
+
+.m-add .img-responsive{
+    width: 264px;
+    height: 172px;
+    margin: 0 auto;
+}
+.border-box{
+    position: absolute;
+    /* width: 87%; */
+    height: 177%;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    bottom: 0;
+    border: 2px solid #998bce;;
+    /* z-index: 0; */
+}
+.img-caption{
+    text-align: center;
+    margin-top: 64%;
+}
+.sub-t-1,.sub-t-2{
+    display: block;
+    /* margin-left: 20px; */
+}
+.sub-t-1{
+    font-size: 24px;
+    margin-top: 30px;
+}
+.sub-t-2{
+    font-size: 18px;
+    margin-top: 4px;
+
+}
+.button{
+    margin-top: 35px;
+    text-align: center;
+    /* margin-left: 15px; */
+}
+.btn{
+    background: #998bce;
+    color: #fff;
+    padding: 5px 40px;
+}
+.btn:hover{
+    color: #998bce;
+    background: #f2f2f2;
+    border: 2px solid #998bce;
+}
+
+
+/* 去掉bootstrap的button按钮点击之后出现的蓝色边框 */
+.btn:focus,.btn:active:focus,.btn.active:focus,.btn.focus,.btn:active.focus,.btn.active.focus {
+    outline: none; 
+    box-shadow:none;
+}
+.main-container .activityInfo .padding-left{
+    padding-left: 40px;
+}
+.padding-left h2{
+    margin-top: 0;
+}
+@media(max-width:768px){
+    
+    .m-add .img-responsive{
+        width: 330px;
+        height: 190px;
+    }
+    .border-box{
+        width: 80%;
+        height: 180%;
+        margin: 0 auto;
+    }
+    
+    .button{
+        margin-top: 0;
+    }
+
+
+    .main-container .activityInfo .padding-left{
+        padding-left: 15px;
+        margin-top: 60%;
+    }
+    .main-container .activityInfo .info{
+        margin-left: 0;
+    }
+    .flex-center {
+        text-align: center;
+    }
+    .main-container .activityInfo h2{
+        text-align: center;
+        margin-top: 20px;
+    }
+    .main-container .activityInfo h4,
+    .main-container .activityInfo h5{
+        text-align: center;
+    }
+    .main-container .activityInfo p{
+        text-align: justify;
+    }
+    .main-container .activityInfo .bgImg .img-caption{
+        padding: 10px 20px;
+    }
+    .btn{
+        width: unset;
+        border-radius: 4px;
+        margin-top: 30px;
+    }
+}
+.main-container .activityInfo .color-1{
+    color: #3a3a3a;
+}
+
+
+
+                                                        /* **** 会议日程 **** */
+
+.main-container .eventShedule h2{
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.main-container .eventShedule .resp-tabs ul{
+    list-style: none;
+}
+.main-container .eventShedule .resp-tabs .resp-tabs-list{
+    margin-bottom: 20px;
+    /* border: 1px solid #ececec; */
+    background-color: transparent;
+    padding: 0;
+    border-radius: 4px;
+    border-bottom: 0;
+}
+.main-container .eventShedule .resp-tabs .resp-tabs-item{
+    font-size: 18px;
+    color: #9989ce;
+    font-weight: 500;
+    cursor: pointer;
+    line-height: 1.6em;
+    margin-bottom: 20px;
+    padding: 5px 30px;
+    border: 1px solid #ececec;
+    border-radius: 4px;
+    transition: all 500ms ease;
+    -webkit-transition: all 500ms ease;
+    -moz-transition: all 500ms ease;
+    -o-transition: all 500ms ease;
+    -ms-transition: all 500ms ease;  
+}
+/* .main-container .eventShedule .resp-tabs .resp-tabs-list li:first-of-type{
+      border-radius: 4px 4px 0 0;
+}
+.main-container .eventShedule .resp-tabs .resp-tabs-list li:last-of-type{
+    border-radius: 0 0 4px 4px;
+    
+} */
+
+.main-container .eventShedule .resp-tabs .resp-tabs-item .time-1{
+    color: #b7b7b7;
+    font-size: 16px;
+    font-weight: 400;
+}
+.main-container .eventShedule .resp-tabs .resp-tabs-active,
+.main-container .eventShedule .resp-tabs .resp-tabs-item:hover{
+    color: #ffffff;
+    background-color: #998ace;
+}
+.main-container .eventShedule .resp-tabs .resp-tabs-active .time-1{
+    color: rgba(255,255,255,0.60);
+}
+
+                                                                /* ***** 会议流程 ***** */
+
+.mm-time-row{
+    /* margin-top: 10px; */
+    margin-bottom: 50px;
+}
+.mm-time-row ul{
+    padding: 0;
+}
+.mm-time-row li{
+    display: inline-block;
+    margin-right: 50px;
+}
+.sub-time{
+    cursor: pointer;
+}
+.mm-time{
+    font-size: 20px;
+    color: #e1aadc;
+    background: #fff;
+    border: 1px solid #e1aadc;
+    padding: 10px 20px;
+    border-radius: 4px;
+}
+.mm-time:hover{
+    color: #fff;
+    background: #e1aadc;
+}
+.mm-time-active{
+    color: #fff;
+    background: #e1aadc;
+}
+@media(max-width:768px){
+    
+    .main-container .eventShedule .resp-tabs .resp-tabs-list{
+        margin-bottom: 10px;
+    }
+
+    .mm-time-row li{
+        margin: 0 auto;
+        margin-bottom: 10px;
+        font-size: 14px;
+        border-bottom: 2px solid transparent;
+    }
+
+
+
+    .mm-time-row{
+        margin-bottom: 10px;
+        text-align: center;
+    }
+    .mm-time-row ul{
+        padding: 0;
+    }
+    .mm-time-row li{
+        display: inline-block;
+        margin-right: 10px;
+    }
+    .sub-time{
+        cursor: pointer;
+    }
+    .mm-time{
+        font-size: 14px;
+        color: #e1aadc;
+        background: #f9f9f9;
+        padding: 10px 0;
+        border: 0;
+    }
+    .mm-time:hover{
+        color: #e1aadc;
+        background: transparent;
+        border-radius: 0;
+    }
+    .mm-time-active{
+        border-radius: 0;
+        border-bottom: 2px solid #e1aadc!important;
+        background: transparent;
+    }
+}
+
+
+.main-container .eventShedule .meeting-agenda-container{
+    padding-left: 30px;
+    animation: fadeInUp 930ms ease-in-out;
+}
+.main-container .eventShedule .meeting-agenda-container .agenda-content:nth-child(odd) .inner-box{
+    background:#f4f4f4;
+    border-radius: 4px;
+}
+.main-container .eventShedule .meeting-agenda-container .agenda-content:nth-child(even) .inner-box{
+    background: #fff;
+}
+
+.meeting-agenda-container .agenda-content{
+    position: relative;
+    -webkit-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    transition: all 0.5s;
+}
+.meeting-agenda-container .agenda-content:last-child{
+    margin-bottom: 100px;
+}
+.meeting-agenda-container .agenda-content:hover{
+	box-shadow: 0px 3px 22px -7px rgba(0, 0, 0, 0.6);
+	-webkit-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    transition: all 0.5s;
+}
+.meeting-agenda-container .agenda-content .inner-box{
+    position: relative;
+    /* padding: 30px 30px; */
+    padding: 15px 30px;
+}
+.time-icon .iconfont{
+    font-size: 22px;
+    color: #ff00a1;
+}
+
+.time-icon:after{
+    position: absolute;
+    content: "";
+    width: 2px;
+    height: 80%;
+    left: 40px;
+    top: 50px;
+    background: #e2e2e2;
+}
+.mm-content{
+    margin-left: 40px;
+    margin-top: -23px;
+}
+.date{
+    color: #5f5f5f;
+}
+.content-title:hover{
+    color: #f00079;
+}
+
+.text{
+    color: #878787;
+}
+.img-wrapper img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 4px solid #f0f0f0;
+    box-shadow: 0 0 4px rgba(0,0,0,0.2);
+    -moz-box-shadow: 0 0 4px rgba(0,0,0,0.2);
+    -webkit-box-shadow: 0 0 4px rgba(0,0,0,0.2);
+    -o-box-shadow: 0 0 4px rgba(0,0,0,0.2);
+    -ms-box-shadow: 0 0 4px rgba(0,0,0,0.2);
+}
+.speaker{
+    margin-left: 30px;
+}
+
+.name{
+    font-weight: bold;
+    font-size: 14px;
+}
+
+@keyframes fadeInUp{
+    0% {
+        -webkit-transform: translateY(15%);
+        -ms-transform: translateY(15%);
+        transform: translateY(15%);
+        opacity: 0;
+    }
+    
+    100% {
+        -webkit-transform: translate(0, 0);
+        -ms-transform: translate(0, 0);
+        transform: translate(0, 0);
+        opacity: 1;
+    }
+}
+
+@media(max-width:768px){
+    .main-container .eventShedule .meeting-agenda-container{
+        padding: 0;
+    }
+    .meeting-agenda-container .agenda-content .inner-box{
+        padding: 15px;
+    }
+
+    .content-title{
+        margin-top: 30px;
+    }
+    .time-icon:after{
+        /* display: none; */
+        position: absolute;
+        content: "";
+        width: 90%;
+        height: 2px;
+        left: 15px;
+        top: 50px;
+        background: #e2e2e2;
+    }
+    .mm-content{
+        margin-left: 0;
+    }
+    .date{
+        margin-left: 40px;
+    }
+}
+
+                                                                /* ***** 会议新闻 ***** */
+
+.main-container .news .news-header{
+    margin-bottom: 5%;
+}
+.main-container .news .news-header h2{
+    font-weight: 600;
+    text-align: center;
+}
+.main-container .news .news-content{
+    background: #fff;
+    border-radius: 10px;
+    padding: 16px;
+    overflow: hidden;
+}
+.main-container .news .news-content .news-title{
+    min-height: 55px;
+    color: #0f1f33;
+    font-size: 20px;
+}
+.main-container .news .news-content .news-date{
+    color: #9989ce;
+    margin: 25px 0;
+}
+.main-container .news .news-content .news-text{
+    text-align: justify;
+    color: #748188;
+}
+.main-container .news .news-content .read-more{
+    color: #9c98d8;
+    background-color: #f2f2f3;
+    padding: 8px;
+    border-radius: 6px;
+    font-size: 12px;
+    cursor: pointer;
+    float: right;
+    display: block;
+}
+.main-container .news .news-content .read-more:hover{
+    background-color: #9989ce;
+    color: #fff;
+}
+
+.main-container .news .news-content a {  
+    text-decoration:none;
+}
+@media(max-width:768px){
+    .main-container .news .news-content{
+        margin-bottom: 20px;
+    }
+    .main-container .news .news-content .news-title{
+        font-size: 20px;
+        height: auto;
+    }
+    
+}
+
+
+                                                         /* ***** 演讲嘉宾 ***** */
+
+.main-container .speakers{
+    position: relative;
+}                                                         
+.main-container .speakers h2{
+    font-weight: 600;
+    text-align: center;
+}
+.main-container .speakers .speakers-content{
+    text-align: center;
+    margin-top: 5%;
+}
+.main-container .speakers .speakers-content img{
+    width: 200px;
+    border-radius: 4px;
+}
+.main-container .speakers .speakers-content h4{
+    font-weight: 600;
+    margin-top: 25px;
+}
+.main-container .speakers .speakers-content p{
+    text-align: justify;
+    margin-bottom: 25px;
+}
+@media(max-width:768px){
+   
+    .main-container .speakers .speakers-content{
+        margin: 10% auto;
+    }
+}
+                                                                /* ***** sponsors ***** */
+.main-container .sponsors-wrapper{
+    padding: 80px 0;
+    background-color: #fff;
+}
+.main-container .sponsors h2{
+    font-weight: 600;
+    text-align: center;
+}
+.main-container .sponsors .sponsors-logo{
+    text-align: center;
+}
+.main-container .sponsors img{
+    width: 80px;
+    margin: 10px;
+}
+.main-container .sponsors .s-info{
+    display: inline-block;
+    margin: 4%;
+}
+                                                                /* ***** map ***** */
+.map-container {
+    height:427px;
+    overflow: hidden;
+    padding:0;
+}
+@media screen and (max-width: 600px){
+
+    .map-container {
+        height:300px;
+    }
+}
+
+
+                                                                /* ***** footer ***** */
+
+.main-container .footer{
+    color: #fff;
+    background-color: #464a4a;
+    text-align: center;
+}
+
+.main-container .footer p{
+    margin-top: 4%;
+    margin-bottom: 4%;
+}
+
+.toTopButton {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: 85px;
+    height: 85px;
+    line-height: 85px;
+    text-align: center;
+    color: #FFF;
+    background: #9989ce;
+    border-radius: 50%;
+    overflow: hidden;
+    text-decoration: none;
+    transition: 0.4s all cubic-bezier(0.41, 0.22, 0.18, 1.71);
+    transform: scale(0.3);
+    cursor: pointer;
+    z-index: 1000;
+}
+.toTopButton-active {
+    visibility: visible;
+    opacity: 1;
+    transform: scale(0.5);
+}
+.top-icon{
+    font-size: 50px;
+}
+.swiper-button-prev,.swiper-button-next{
+    z-index: 9999;
+    cursor: pointer;
+}
+.toTopButton:before {
+    font-family: iconfont;
+    content: '\e64e';
+    font-size: 40px;
+}
+.resp-tabs{
+    margin: 30px 0;
+}
+
+
+
+ul li{
+    list-style: none;
+}

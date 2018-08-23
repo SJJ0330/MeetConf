@@ -1,0 +1,1630 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/iconfont.css">
+    <link rel="stylesheet" href="css/meet.css">
+    <link rel="stylesheet" href="css/mediaQuery.css">
+
+    <title>MeetconfGreen</title>
+
+    <script src="js/jquery-3.2.1.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/html5media.min.js"></script>
+    <script src="js/jquery.nav.js"></script>
+    <script src="js/index.js"></script>
+
+    <!--百度API-->
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=3.0&ak=6lbr4qZ7nKyPo4bwGFguvFnbr4WTbgWt"></script>
+    <script src='https://api.map.baidu.com/library/SearchInfoWindow/1.5/src/SearchInfoWindow_min.js' type='text/javascript'></script>
+    <link href='https://api.map.baidu.com/library/SearchInfoWindow/1.5/src/SearchInfoWindow_min.css' rel='stylesheet'>
+
+</head>
+<body id="page">
+    <div class="bg"><div class="bg-gray"></div> </div>
+    <!-- Page Content -->
+    <div class="page-wrapper">
+
+        <!-- header -->
+        <header class="main-header">
+            <div class="header-wrapper chgBorderColor">
+                <a href="#" class="home-url pull-left">
+                    <img src="img/njulogo.png" alt="site logo">
+                </a>
+
+                <!-- toggle 是切换的意思，即使用自定义效果来显示或隐藏匹配的元素 -->
+                <span class="mobile-nav-toggle words" id="mobile-nav-toggle">
+                    <i class="mobile-nav-button iconfont text-center aside-menu-icon">&#xe605;</i>
+                </span>
+
+                <nav class="main-nav nav nav-height" id="navbar" role="navigation">
+                    <ul class="t-clean-list" id="nav-ul"  role="tablist">
+                        <li class="nav-li words active highlighted">
+                            <a href="#home">主页</a>
+                        </li>
+                        <li class="nav-li words">
+                            <a href="#about">简介</a>
+                        </li>
+                        <li class="nav-li words">
+                            <a href="#program">议程</a>
+                        </li>
+                        <li class="nav-li words">
+                            <a href="#speaker">嘉宾</a>
+                        </li>
+                        <li class="nav-li words">
+                            <a href="#news">新闻</a>
+                        </li>
+                        <li class="nav-li words">
+                            <a href="#sponsor">赞助商</a>
+                        </li>
+                        <li class="nav-li words">
+                            <a href="#allmap">位置</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <!-- Content Wrapper -->
+        <div class="content-wrapper">
+            <section class="section section-home" id="home">
+                <div class="main-slider">
+                    <!-- Slider Content -->
+                    <div class="slider-content">
+                        <div class="container">
+                            <div class="inner-content">
+                                <div class="event-info">
+                                    <h1 class="event-name">江苏省大学生创新创业优秀成果交流展示会</h1>
+                                    <button class="btn submit-button chgBgColor"><a href="#register">立即注册</a></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- About Section -->
+            <section class="section section-about" id="about">
+                <!-- About Box Wrapper -->
+                <div class="container">
+                    <!-- 这里的背景只有60%高，因为加在了about-box:before上 -->
+                    <div class="about-box" id="about-box">
+                        <div class="row">
+                            <div class="col-md-4 text-box about-text-box">
+                                <i class="about-i iconfont text-center">&#xe649;</i>
+                                <div class="about-text">
+                                    <h4>时间</h4>
+                                    <p>2018-9-20</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4 text-box about-text-box">
+                                <i class="about-i iconfont text-center">&#xe655;</i>
+                                <div class="about-text">
+                                    <h4>地点</h4>
+                                    <p>南京大学仙林校区</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4 text-box about-text-box">
+                                <i class="about-i iconfont text-center">&#xe74b;</i>
+                                <div class="about-text">
+                                    <h4>演讲者</h4>
+                                    <p>12位专家学者</p>
+                                </div>
+                            </div>
+                            <!-- <div class="col-md-3 text-box about-text-box">
+                                <i class="about-i iconfont text-center">&#xe61c;</i>
+                                <div class="about-text">
+                                    <h4>下午茶</h4>
+                                    <p>南京大学仙林校区</p>
+                                </div>
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+
+            <!-- 会议流程 添加分会场-->
+            <section class="section section-program " id="program">
+                <div class="gray-wrapper">
+                    <div class="section-header">
+                        <h2 class="text-center">会议议程</h2>
+                    </div>
+
+                    <div class="program-tabs">
+                        <div class="tabed-content">
+                            <div class="tabs-header">
+                                <div class="container">
+                                    <ul class="clean-list">
+                                        <li class="tab-link mm-program-tab-link currentTab today" data-a="day-1">
+                                            <div class="tab-link-control ">
+                                                <span class="date">第一分会场</span>
+                                            </div>
+                                        </li>
+                                        <li class="tab-link mm-program-tab-link" data-a="day-2">
+                                            <div class="tab-link-control ">
+                                                <span class="date">第二分会场</span>
+                                            </div>
+                                        </li>
+                                        <li class="tab-link mm-program-tab-link" data-a="day-3">
+                                            <div class="tab-link-control ">
+                                                <span class="date">第三分会场</span>
+                                            </div>
+                                        </li>
+                                        <li class="tab-link mm-program-tab-link" data-a="day-4">
+                                            <div class="tab-link-control ">
+                                                <span class="date">第四分会场</span>
+                                            </div>
+                                        </li>
+                                        <li class="tab-link mm-program-tab-link" data-a="day-5">
+                                            <div class="tab-link-control ">
+                                                <span class="date">第五分会场</span>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            
+                            <div class="tabs-body" data-b="day-1">
+                                <div class="sub-wrapper">
+                                    <div class="container">
+                                        <ul class="clean-list">
+                                            <li class="sub tab-link program-tab-link sub-active" data-c="time-1">
+                                                <div class="tab-link-control ">
+                                                    <span class="date">4月25日</span>
+                                                </div>
+                                            </li>
+                                            <li class="sub tab-link program-tab-link" data-c="time-2">
+                                                <div class="tab-link-control ">
+                                                    <span class="date">14月25日</span>
+                                                </div>
+                                            </li>
+                                            <li class="sub tab-link program-tab-link" data-c="time-3">
+                                                <div class="tab-link-control ">
+                                                    <span class="date">4月25日</span>
+                                                </div>
+                                            </li>
+                            
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="program-tab" data-d="time-1">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-md-3 col-sm-4 col-xs-6">
+                                                <div class="program-box">
+                                                    <div class="program-img">
+                                                        <img src="img/program-1.jpg">
+                                                    </div>
+                                
+                                                    <div class="program-box-text">
+                                                        <span class="timming">
+                                                            <i class="iconfont">&#xe6b5;</i>8:00 - 11:00</span>
+                                                        <h5 class="title">智能机器人发布会</h5>
+                                
+                                                        <p class="description">2016年4月10日，鑫益嘉旗下巴巴腾首款儿童智能陪护机器人——“小腾”在宝立方博览中心震撼发布，本次发布会主题为“科技无限，智在未来”。</p>
+                                                     </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3 col-sm-4 col-xs-6">
+                                                <div class="program-box">
+                                                    <div class="program-img">
+                                                        <img src="img/program-1.jpg">
+                                                    </div>
+                                
+                                                    <div class="program-box-text">
+                                                        <span class="timming">
+                                                            <i class="iconfont">&#xe6b5;</i>8:00 - 11:00</span>
+                                                        <h5 class="title">智能机器人发布会</h5>
+                                
+                                                        <p class="description">2016年4月10日，鑫益嘉旗下巴巴腾首款儿童智能陪护机器人——“小腾”在宝立方博览中心震撼发布，本次发布会主题为“科技无限，智在未来”。</p>
+                                                     </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3 col-sm-4 col-xs-6">
+                                                <div class="program-box">
+                                                    <div class="program-img">
+                                                        <img src="img/program-1.jpg">
+                                                    </div>
+                                
+                                                    <div class="program-box-text">
+                                                        <span class="timming">
+                                                            <i class="iconfont">&#xe6b5;</i>8:00 - 11:00</span>
+                                                        <h5 class="title">智能机器人发布会</h5>
+                                
+                                                        <p class="description">2016年4月10日，鑫益嘉旗下巴巴腾首款儿童智能陪护机器人——“小腾”在宝立方博览中心震撼发布，本次发布会主题为“科技无限，智在未来”。</p>
+                                                     </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3 col-sm-4 col-xs-6">
+                                                <div class="program-box">
+                                                    <div class="program-img">
+                                                        <img src="img/program-1.jpg">
+                                                    </div>
+                                
+                                                    <div class="program-box-text">
+                                                        <span class="timming">
+                                                            <i class="iconfont">&#xe6b5;</i>8:00 - 11:00</span>
+                                                        <h5 class="title">智能机器人发布会</h5>
+                                
+                                                        <p class="description">2016年4月10日，鑫益嘉旗下巴巴腾首款儿童智能陪护机器人——“小腾”在宝立方博览中心震撼发布，本次发布会主题为“科技无限，智在未来”。</p>
+                                                     </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="program-tab" data-d="time-2">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-md-3 col-sm-4 col-xs-6">
+                                                <div class="program-box">
+                                                    <div class="program-img">
+                                                        <img src="img/program-1.jpg">
+                                                    </div>
+                                
+                                                    <div class="program-box-text">
+                                                        <span class="timming">
+                                                            <i class="iconfont">&#xe6b5;</i>8:00 - 11:00</span>
+                                                        <h5 class="title">智能机器人发布会</h5>
+                                
+                                                        <p class="description">2016年4月10日，鑫益嘉旗下巴巴腾首款儿童智能陪护机器人——“小腾”在宝立方博览中心震撼发布，本次发布会主题为“科技无限，智在未来”。</p>
+                                                     </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3 col-sm-4 col-xs-6">
+                                                <div class="program-box">
+                                                    <div class="program-img">
+                                                        <img src="img/program-1.jpg">
+                                                    </div>
+                                
+                                                    <div class="program-box-text">
+                                                        <span class="timming">
+                                                            <i class="iconfont">&#xe6b5;</i>8:00 - 11:00</span>
+                                                        <h5 class="title">智能机器人发布会</h5>
+                                
+                                                        <p class="description">2016年4月10日，鑫益嘉旗下巴巴腾首款儿童智能陪护机器人——“小腾”在宝立方博览中心震撼发布，本次发布会主题为“科技无限，智在未来”。</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3 col-sm-4 col-xs-6">
+                                                <div class="program-box">
+                                                    <div class="program-img">
+                                                        <img src="img/program-1.jpg">
+                                                    </div>
+                                
+                                                    <div class="program-box-text">
+                                                        <span class="timming">
+                                                            <i class="iconfont">&#xe6b5;</i>8:00 - 11:00</span>
+                                                        <h5 class="title">智能机器人发布会</h5>
+                                
+                                                        <p class="description">2016年4月10日，鑫益嘉旗下巴巴腾首款儿童智能陪护机器人——“小腾”在宝立方博览中心震撼发布，本次发布会主题为“科技无限，智在未来”。</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3 col-sm-4 col-xs-6">
+                                                <div class="program-box">
+                                                    <div class="program-img">
+                                                        <img src="img/program-1.jpg">
+                                                    </div>
+                                
+                                                    <div class="program-box-text">
+                                                        <span class="timming">
+                                                            <i class="iconfont">&#xe6b5;</i>8:00 - 11:00</span>
+                                                        <h5 class="title">智能机器人发布会</h5>
+                                
+                                                        <p class="description">2016年4月10日，鑫益嘉旗下巴巴腾首款儿童智能陪护机器人——“小腾”在宝立方博览中心震撼发布，本次发布会主题为“科技无限，智在未来”。</p>
+                                                   </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="program-tab" data-d="time-3">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-md-3 col-sm-4 col-xs-6">
+                                                <div class="program-box">
+                                                    <div class="program-img">
+                                                        <img src="img/program-1.jpg">
+                                                    </div>
+                                
+                                                    <div class="program-box-text">
+                                                        <span class="timming">
+                                                            <i class="iconfont">&#xe6b5;</i>8:00 - 11:00</span>
+                                                        <h5 class="title">智能机器人发布会</h5>
+                                
+                                                        <p class="description">2016年4月10日，鑫益嘉旗下巴巴腾首款儿童智能陪护机器人——“小腾”在宝立方博览中心震撼发布，本次发布会主题为“科技无限，智在未来”。</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3 col-sm-4 col-xs-6">
+                                                <div class="program-box">
+                                                    <div class="program-img">
+                                                        <img src="img/program-1.jpg">
+                                                    </div>
+                                
+                                                    <div class="program-box-text">
+                                                        <span class="timming">
+                                                            <i class="iconfont">&#xe6b5;</i>8:00 - 11:00</span>
+                                                        <h5 class="title">智能机器人发布会</h5>
+                                
+                                                        <p class="description">2016年4月10日，鑫益嘉旗下巴巴腾首款儿童智能陪护机器人——“小腾”在宝立方博览中心震撼发布，本次发布会主题为“科技无限，智在未来”。</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3 col-sm-4 col-xs-6">
+                                                <div class="program-box">
+                                                    <div class="program-img">
+                                                        <img src="img/program-1.jpg">
+                                                    </div>
+                                
+                                                    <div class="program-box-text">
+                                                        <span class="timming">
+                                                            <i class="iconfont">&#xe6b5;</i>8:00 - 11:00</span>
+                                                        <h5 class="title">智能机器人发布会</h5>
+                                
+                                                        <p class="description">2016年4月10日，鑫益嘉旗下巴巴腾首款儿童智能陪护机器人——“小腾”在宝立方博览中心震撼发布，本次发布会主题为“科技无限，智在未来”。</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3 col-sm-4 col-xs-6">
+                                                <div class="program-box">
+                                                    <div class="program-img">
+                                                        <img src="img/program-1.jpg">
+                                                    </div>
+                                
+                                                    <div class="program-box-text">
+                                                        <span class="timming">
+                                                            <i class="iconfont">&#xe6b5;</i>8:00 - 11:00</span>
+                                                        <h5 class="title">智能机器人发布会</h5>
+                                
+                                                        <p class="description">2016年4月10日，鑫益嘉旗下巴巴腾首款儿童智能陪护机器人——“小腾”在宝立方博览中心震撼发布，本次发布会主题为“科技无限，智在未来”。</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="tabs-body" data-b="day-2">
+                                <div class="sub-wrapper">
+                                    <div class="container">
+                                        <ul class="clean-list">
+                                            <li class="sub tab-link program-tab-link sub-active" data-c="time-1">
+                                                <div class="tab-link-control ">
+                                                    <span class="date">4月25日</span>
+                                                </div>
+                                            </li>
+                                            <li class="sub tab-link program-tab-link" data-c="time-2">
+                                                <div class="tab-link-control ">
+                                                    <span class="date">14月25日</span>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="program-tab" data-d="time-1">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-md-3 col-sm-4 col-xs-6">
+                                                <div class="program-box">
+                                                    <div class="program-img">
+                                                        <img src="img/program-1.jpg">
+                                                    </div>
+                                
+                                                    <div class="program-box-text">
+                                                        <span class="timming">
+                                                            <i class="iconfont">&#xe6b5;</i>8:00 - 11:00</span>
+                                                        <h5 class="title">智能机器人发布会</h5>
+                                
+                                                        <p class="description">2016年4月10日，鑫益嘉旗下巴巴腾首款儿童智能陪护机器人——“小腾”在宝立方博览中心震撼发布，本次发布会主题为“科技无限，智在未来”。</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3 col-sm-4 col-xs-6">
+                                                <div class="program-box">
+                                                    <div class="program-img">
+                                                        <img src="img/program-1.jpg">
+                                                    </div>
+                                
+                                                    <div class="program-box-text">
+                                                        <span class="timming">
+                                                            <i class="iconfont">&#xe6b5;</i>8:00 - 11:00</span>
+                                                        <h5 class="title">智能机器人发布会</h5>
+                                
+                                                        <p class="description">2016年4月10日，鑫益嘉旗下巴巴腾首款儿童智能陪护机器人——“小腾”在宝立方博览中心震撼发布，本次发布会主题为“科技无限，智在未来”。</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3 col-sm-4 col-xs-6">
+                                                <div class="program-box">
+                                                    <div class="program-img">
+                                                        <img src="img/program-1.jpg">
+                                                    </div>
+                                
+                                                    <div class="program-box-text">
+                                                        <span class="timming">
+                                                            <i class="iconfont">&#xe6b5;</i>8:00 - 11:00</span>
+                                                        <h5 class="title">智能机器人发布会</h5>
+                                
+                                                        <p class="description">2016年4月10日，鑫益嘉旗下巴巴腾首款儿童智能陪护机器人——“小腾”在宝立方博览中心震撼发布，本次发布会主题为“科技无限，智在未来”。</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3 col-sm-4 col-xs-6">
+                                                <div class="program-box">
+                                                    <div class="program-img">
+                                                        <img src="img/program-1.jpg">
+                                                    </div>
+                                
+                                                    <div class="program-box-text">
+                                                        <span class="timming">
+                                                            <i class="iconfont">&#xe6b5;</i>8:00 - 11:00</span>
+                                                        <h5 class="title">智能机器人发布会</h5>
+                                
+                                                        <p class="description">2016年4月10日，鑫益嘉旗下巴巴腾首款儿童智能陪护机器人——“小腾”在宝立方博览中心震撼发布，本次发布会主题为“科技无限，智在未来”。</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="program-tab" data-d="time-2">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-md-3 col-sm-4 col-xs-6">
+                                                <div class="program-box">
+                                                    <div class="program-img">
+                                                        <img src="img/program-1.jpg">
+                                                    </div>
+                                
+                                                    <div class="program-box-text">
+                                                        <span class="timming">
+                                                            <i class="iconfont">&#xe6b5;</i>8:00 - 11:00</span>
+                                                        <h5 class="title">智能机器人发布会</h5>
+                                
+                                                        <p class="description">2016年4月10日，鑫益嘉旗下巴巴腾首款儿童智能陪护机器人——“小腾”在宝立方博览中心震撼发布，本次发布会主题为“科技无限，智在未来”。</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3 col-sm-4 col-xs-6">
+                                                <div class="program-box">
+                                                    <div class="program-img">
+                                                        <img src="img/program-1.jpg">
+                                                    </div>
+                                
+                                                    <div class="program-box-text">
+                                                        <span class="timming">
+                                                            <i class="iconfont">&#xe6b5;</i>8:00 - 11:00</span>
+                                                        <h5 class="title">智能机器人发布会</h5>
+                                
+                                                        <p class="description">2016年4月10日，鑫益嘉旗下巴巴腾首款儿童智能陪护机器人——“小腾”在宝立方博览中心震撼发布，本次发布会主题为“科技无限，智在未来”。</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3 col-sm-4 col-xs-6">
+                                                <div class="program-box">
+                                                    <div class="program-img">
+                                                        <img src="img/program-1.jpg">
+                                                    </div>
+                                
+                                                    <div class="program-box-text">
+                                                        <span class="timming">
+                                                            <i class="iconfont">&#xe6b5;</i>8:00 - 11:00</span>
+                                                        <h5 class="title">智能机器人发布会</h5>
+                                
+                                                        <p class="description">2016年4月10日，鑫益嘉旗下巴巴腾首款儿童智能陪护机器人——“小腾”在宝立方博览中心震撼发布，本次发布会主题为“科技无限，智在未来”。</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3 col-sm-4 col-xs-6">
+                                                <div class="program-box">
+                                                    <div class="program-img">
+                                                        <img src="img/program-1.jpg">
+                                                    </div>
+                                
+                                                    <div class="program-box-text">
+                                                        <span class="timming">
+                                                            <i class="iconfont">&#xe6b5;</i>8:00 - 11:00</span>
+                                                        <h5 class="title">智能机器人发布会</h5>
+                                
+                                                        <p class="description">2016年4月10日，鑫益嘉旗下巴巴腾首款儿童智能陪护机器人——“小腾”在宝立方博览中心震撼发布，本次发布会主题为“科技无限，智在未来”。</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            
+                            <div class="tabs-body" data-b="day-3">
+                                <div class="sub-wrapper">
+                                    <div class="container">
+                                        <ul class="clean-list">
+                                            <li class="sub tab-link program-tab-link sub-active" data-c="time-1">
+                                                <div class="tab-link-control ">
+                                                    <span class="date">4月25日</span>
+                                                </div>
+                                            </li>
+                                            <li class="sub tab-link program-tab-link" data-c="time-2">
+                                                <div class="tab-link-control ">
+                                                    <span class="date">14月25日</span>
+                                                </div>
+                                            </li>
+                                            <li class="sub tab-link program-tab-link" data-c="time-3">
+                                                <div class="tab-link-control ">
+                                                    <span class="date">4月25日</span>
+                                                </div>
+                                            </li>
+                            
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="program-tab" data-d="time-1">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-md-3 col-sm-4 col-xs-6">
+                                                <div class="program-box">
+                                                    <div class="program-img">
+                                                        <img src="img/program-1.jpg">
+                                                    </div>
+                                
+                                                    <div class="program-box-text">
+                                                        <span class="timming">
+                                                            <i class="iconfont">&#xe6b5;</i>8:00 - 11:00</span>
+                                                        <h5 class="title">智能机器人发布会</h5>
+                                
+                                                        <p class="description">2016年4月10日，鑫益嘉旗下巴巴腾首款儿童智能陪护机器人——“小腾”在宝立方博览中心震撼发布，本次发布会主题为“科技无限，智在未来”。</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3 col-sm-4 col-xs-6">
+                                                <div class="program-box">
+                                                    <div class="program-img">
+                                                        <img src="img/program-1.jpg">
+                                                    </div>
+                                
+                                                    <div class="program-box-text">
+                                                        <span class="timming">
+                                                            <i class="iconfont">&#xe6b5;</i>8:00 - 11:00</span>
+                                                        <h5 class="title">智能机器人发布会</h5>
+                                
+                                                        <p class="description">2016年4月10日，鑫益嘉旗下巴巴腾首款儿童智能陪护机器人——“小腾”在宝立方博览中心震撼发布，本次发布会主题为“科技无限，智在未来”。</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3 col-sm-4 col-xs-6">
+                                                <div class="program-box">
+                                                    <div class="program-img">
+                                                        <img src="img/program-1.jpg">
+                                                    </div>
+                                
+                                                    <div class="program-box-text">
+                                                        <span class="timming">
+                                                            <i class="iconfont">&#xe6b5;</i>8:00 - 11:00</span>
+                                                        <h5 class="title">智能机器人发布会</h5>
+                                
+                                                        <p class="description">2016年4月10日，鑫益嘉旗下巴巴腾首款儿童智能陪护机器人——“小腾”在宝立方博览中心震撼发布，本次发布会主题为“科技无限，智在未来”。</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3 col-sm-4 col-xs-6">
+                                                <div class="program-box">
+                                                    <div class="program-img">
+                                                        <img src="img/program-1.jpg">
+                                                    </div>
+                                
+                                                    <div class="program-box-text">
+                                                        <span class="timming">
+                                                            <i class="iconfont">&#xe6b5;</i>8:00 - 11:00</span>
+                                                        <h5 class="title">智能机器人发布会</h5>
+                                
+                                                        <p class="description">2016年4月10日，鑫益嘉旗下巴巴腾首款儿童智能陪护机器人——“小腾”在宝立方博览中心震撼发布，本次发布会主题为“科技无限，智在未来”。</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="program-tab" data-d="time-2">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-md-3 col-sm-4 col-xs-6">
+                                                <div class="program-box">
+                                                    <div class="program-img">
+                                                        <img src="img/program-1.jpg">
+                                                    </div>
+                                
+                                                    <div class="program-box-text">
+                                                        <span class="timming">
+                                                            <i class="iconfont">&#xe6b5;</i>8:00 - 11:00</span>
+                                                        <h5 class="title">智能机器人发布会</h5>
+                                
+                                                        <p class="description">2016年4月10日，鑫益嘉旗下巴巴腾首款儿童智能陪护机器人——“小腾”在宝立方博览中心震撼发布，本次发布会主题为“科技无限，智在未来”。</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3 col-sm-4 col-xs-6">
+                                                <div class="program-box">
+                                                    <div class="program-img">
+                                                        <img src="img/program-1.jpg">
+                                                    </div>
+                                
+                                                    <div class="program-box-text">
+                                                        <span class="timming">
+                                                            <i class="iconfont">&#xe6b5;</i>8:00 - 11:00</span>
+                                                        <h5 class="title">智能机器人发布会</h5>
+                                
+                                                        <p class="description">2016年4月10日，鑫益嘉旗下巴巴腾首款儿童智能陪护机器人——“小腾”在宝立方博览中心震撼发布，本次发布会主题为“科技无限，智在未来”。</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3 col-sm-4 col-xs-6">
+                                                <div class="program-box">
+                                                    <div class="program-img">
+                                                        <img src="img/program-1.jpg">
+                                                    </div>
+                                
+                                                    <div class="program-box-text">
+                                                        <span class="timming">
+                                                            <i class="iconfont">&#xe6b5;</i>8:00 - 11:00</span>
+                                                        <h5 class="title">智能机器人发布会</h5>
+                                
+                                                        <p class="description">2016年4月10日，鑫益嘉旗下巴巴腾首款儿童智能陪护机器人——“小腾”在宝立方博览中心震撼发布，本次发布会主题为“科技无限，智在未来”。</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3 col-sm-4 col-xs-6">
+                                                <div class="program-box">
+                                                    <div class="program-img">
+                                                        <img src="img/program-1.jpg">
+                                                    </div>
+                                
+                                                    <div class="program-box-text">
+                                                        <span class="timming">
+                                                            <i class="iconfont">&#xe6b5;</i>8:00 - 11:00</span>
+                                                        <h5 class="title">智能机器人发布会</h5>
+                                
+                                                        <p class="description">2016年4月10日，鑫益嘉旗下巴巴腾首款儿童智能陪护机器人——“小腾”在宝立方博览中心震撼发布，本次发布会主题为“科技无限，智在未来”。</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="program-tab" data-d="time-3">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-md-3 col-sm-4 col-xs-6">
+                                                <div class="program-box">
+                                                    <div class="program-img">
+                                                        <img src="img/program-1.jpg">
+                                                    </div>
+                                
+                                                    <div class="program-box-text">
+                                                        <span class="timming">
+                                                            <i class="iconfont">&#xe6b5;</i>8:00 - 11:00</span>
+                                                        <h5 class="title">智能机器人发布会</h5>
+                                
+                                                        <p class="description">2016年4月10日，鑫益嘉旗下巴巴腾首款儿童智能陪护机器人——“小腾”在宝立方博览中心震撼发布，本次发布会主题为“科技无限，智在未来”。</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3 col-sm-4 col-xs-6">
+                                                <div class="program-box">
+                                                    <div class="program-img">
+                                                        <img src="img/program-1.jpg">
+                                                    </div>
+                                
+                                                    <div class="program-box-text">
+                                                        <span class="timming">
+                                                            <i class="iconfont">&#xe6b5;</i>8:00 - 11:00</span>
+                                                        <h5 class="title">智能机器人发布会</h5>
+                                
+                                                        <p class="description">2016年4月10日，鑫益嘉旗下巴巴腾首款儿童智能陪护机器人——“小腾”在宝立方博览中心震撼发布，本次发布会主题为“科技无限，智在未来”。</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3 col-sm-4 col-xs-6">
+                                                <div class="program-box">
+                                                    <div class="program-img">
+                                                        <img src="img/program-1.jpg">
+                                                    </div>
+                                
+                                                    <div class="program-box-text">
+                                                        <span class="timming">
+                                                            <i class="iconfont">&#xe6b5;</i>8:00 - 11:00</span>
+                                                        <h5 class="title">智能机器人发布会</h5>
+                                
+                                                        <p class="description">2016年4月10日，鑫益嘉旗下巴巴腾首款儿童智能陪护机器人——“小腾”在宝立方博览中心震撼发布，本次发布会主题为“科技无限，智在未来”。</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3 col-sm-4 col-xs-6">
+                                                <div class="program-box">
+                                                    <div class="program-img">
+                                                        <img src="img/program-1.jpg">
+                                                    </div>
+                                
+                                                    <div class="program-box-text">
+                                                        <span class="timming">
+                                                            <i class="iconfont">&#xe6b5;</i>8:00 - 11:00</span>
+                                                        <h5 class="title">智能机器人发布会</h5>
+                                
+                                                        <p class="description">2016年4月10日，鑫益嘉旗下巴巴腾首款儿童智能陪护机器人——“小腾”在宝立方博览中心震撼发布，本次发布会主题为“科技无限，智在未来”。</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="tabs-body" data-b="day-4">
+                                <div class="sub-wrapper">
+                                    <div class="container">
+                                        <ul class="clean-list">
+                                            <li class="sub tab-link program-tab-link sub-active" data-c="time-1">
+                                                <div class="tab-link-control ">
+                                                    <span class="date">4月25日</span>
+                                                </div>
+                                            </li>
+                                            <li class="sub tab-link program-tab-link" data-c="time-2">
+                                                <div class="tab-link-control ">
+                                                    <span class="date">14月25日</span>
+                                                </div>
+                                            </li>
+                                            <li class="sub tab-link program-tab-link" data-c="time-3">
+                                                <div class="tab-link-control ">
+                                                    <span class="date">4月25日</span>
+                                                </div>
+                                            </li>
+                            
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="program-tab " data-d="time-1">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-md-3 col-sm-4 col-xs-6">
+                                                <div class="program-box">
+                                                    <div class="program-img">
+                                                        <img src="img/program-1.jpg">
+                                                    </div>
+                                
+                                                    <div class="program-box-text">
+                                                        <span class="timming">
+                                                            <i class="iconfont">&#xe6b5;</i>8:00 - 11:00</span>
+                                                        <h5 class="title">智能机器人发布会</h5>
+                                
+                                                        <p class="description">2016年4月10日，鑫益嘉旗下巴巴腾首款儿童智能陪护机器人——“小腾”在宝立方博览中心震撼发布，本次发布会主题为“科技无限，智在未来”。</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3 col-sm-4 col-xs-6">
+                                                <div class="program-box">
+                                                    <div class="program-img">
+                                                        <img src="img/program-1.jpg">
+                                                    </div>
+                                
+                                                    <div class="program-box-text">
+                                                        <span class="timming">
+                                                            <i class="iconfont">&#xe6b5;</i>8:00 - 11:00</span>
+                                                        <h5 class="title">智能机器人发布会</h5>
+                                
+                                                        <p class="description">2016年4月10日，鑫益嘉旗下巴巴腾首款儿童智能陪护机器人——“小腾”在宝立方博览中心震撼发布，本次发布会主题为“科技无限，智在未来”。</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3 col-sm-4 col-xs-6">
+                                                <div class="program-box">
+                                                    <div class="program-img">
+                                                        <img src="img/program-1.jpg">
+                                                    </div>
+                                
+                                                    <div class="program-box-text">
+                                                        <span class="timming">
+                                                            <i class="iconfont">&#xe6b5;</i>8:00 - 11:00</span>
+                                                        <h5 class="title">智能机器人发布会</h5>
+                                
+                                                        <p class="description">2016年4月10日，鑫益嘉旗下巴巴腾首款儿童智能陪护机器人——“小腾”在宝立方博览中心震撼发布，本次发布会主题为“科技无限，智在未来”。</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3 col-sm-4 col-xs-6">
+                                                <div class="program-box">
+                                                    <div class="program-img">
+                                                        <img src="img/program-1.jpg">
+                                                    </div>
+                                
+                                                    <div class="program-box-text">
+                                                        <span class="timming">
+                                                            <i class="iconfont">&#xe6b5;</i>8:00 - 11:00</span>
+                                                        <h5 class="title">智能机器人发布会</h5>
+                                
+                                                        <p class="description">2016年4月10日，鑫益嘉旗下巴巴腾首款儿童智能陪护机器人——“小腾”在宝立方博览中心震撼发布，本次发布会主题为“科技无限，智在未来”。</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="program-tab " data-d="time-2">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-md-3 col-sm-4 col-xs-6">
+                                                <div class="program-box">
+                                                    <div class="program-img">
+                                                        <img src="img/program-1.jpg">
+                                                    </div>
+                                
+                                                    <div class="program-box-text">
+                                                        <span class="timming">
+                                                            <i class="iconfont">&#xe6b5;</i>8:00 - 11:00</span>
+                                                        <h5 class="title">智能机器人发布会</h5>
+                                
+                                                        <p class="description">2016年4月10日，鑫益嘉旗下巴巴腾首款儿童智能陪护机器人——“小腾”在宝立方博览中心震撼发布，本次发布会主题为“科技无限，智在未来”。</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3 col-sm-4 col-xs-6">
+                                                <div class="program-box">
+                                                    <div class="program-img">
+                                                        <img src="img/program-1.jpg">
+                                                    </div>
+                                
+                                                    <div class="program-box-text">
+                                                        <span class="timming">
+                                                            <i class="iconfont">&#xe6b5;</i>8:00 - 11:00</span>
+                                                        <h5 class="title">智能机器人发布会</h5>
+                                
+                                                        <p class="description">2016年4月10日，鑫益嘉旗下巴巴腾首款儿童智能陪护机器人——“小腾”在宝立方博览中心震撼发布，本次发布会主题为“科技无限，智在未来”。</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3 col-sm-4 col-xs-6">
+                                                <div class="program-box">
+                                                    <div class="program-img">
+                                                        <img src="img/program-1.jpg">
+                                                    </div>
+                                
+                                                    <div class="program-box-text">
+                                                        <span class="timming">
+                                                            <i class="iconfont">&#xe6b5;</i>8:00 - 11:00</span>
+                                                        <h5 class="title">智能机器人发布会</h5>
+                                
+                                                        <p class="description">2016年4月10日，鑫益嘉旗下巴巴腾首款儿童智能陪护机器人——“小腾”在宝立方博览中心震撼发布，本次发布会主题为“科技无限，智在未来”。</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3 col-sm-4 col-xs-6">
+                                                <div class="program-box">
+                                                    <div class="program-img">
+                                                        <img src="img/program-1.jpg">
+                                                    </div>
+                                
+                                                    <div class="program-box-text">
+                                                        <span class="timming">
+                                                            <i class="iconfont">&#xe6b5;</i>8:00 - 11:00</span>
+                                                        <h5 class="title">智能机器人发布会</h5>
+                                
+                                                        <p class="description">2016年4月10日，鑫益嘉旗下巴巴腾首款儿童智能陪护机器人——“小腾”在宝立方博览中心震撼发布，本次发布会主题为“科技无限，智在未来”。</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="program-tab " data-d="time-3">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-md-3 col-sm-4 col-xs-6">
+                                                <div class="program-box">
+                                                    <div class="program-img">
+                                                        <img src="img/program-1.jpg">
+                                                    </div>
+                                
+                                                    <div class="program-box-text">
+                                                        <span class="timming">
+                                                            <i class="iconfont">&#xe6b5;</i>8:00 - 11:00</span>
+                                                        <h5 class="title">智能机器人发布会</h5>
+                                
+                                                        <p class="description">2016年4月10日，鑫益嘉旗下巴巴腾首款儿童智能陪护机器人——“小腾”在宝立方博览中心震撼发布，本次发布会主题为“科技无限，智在未来”。</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3 col-sm-4 col-xs-6">
+                                                <div class="program-box">
+                                                    <div class="program-img">
+                                                        <img src="img/program-1.jpg">
+                                                    </div>
+                                
+                                                    <div class="program-box-text">
+                                                        <span class="timming">
+                                                            <i class="iconfont">&#xe6b5;</i>8:00 - 11:00</span>
+                                                        <h5 class="title">智能机器人发布会</h5>
+                                
+                                                        <p class="description">2016年4月10日，鑫益嘉旗下巴巴腾首款儿童智能陪护机器人——“小腾”在宝立方博览中心震撼发布，本次发布会主题为“科技无限，智在未来”。</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3 col-sm-4 col-xs-6">
+                                                <div class="program-box">
+                                                    <div class="program-img">
+                                                        <img src="img/program-1.jpg">
+                                                    </div>
+                                
+                                                    <div class="program-box-text">
+                                                        <span class="timming">
+                                                            <i class="iconfont">&#xe6b5;</i>8:00 - 11:00</span>
+                                                        <h5 class="title">智能机器人发布会</h5>
+                                
+                                                        <p class="description">2016年4月10日，鑫益嘉旗下巴巴腾首款儿童智能陪护机器人——“小腾”在宝立方博览中心震撼发布，本次发布会主题为“科技无限，智在未来”。</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3 col-sm-4 col-xs-6">
+                                                <div class="program-box">
+                                                    <div class="program-img">
+                                                        <img src="img/program-1.jpg">
+                                                    </div>
+                                
+                                                    <div class="program-box-text">
+                                                        <span class="timming">
+                                                            <i class="iconfont">&#xe6b5;</i>8:00 - 11:00</span>
+                                                        <h5 class="title">智能机器人发布会</h5>
+                                
+                                                        <p class="description">2016年4月10日，鑫益嘉旗下巴巴腾首款儿童智能陪护机器人——“小腾”在宝立方博览中心震撼发布，本次发布会主题为“科技无限，智在未来”。</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="tabs-body" data-b="day-5">
+                                <div class="sub-wrapper">
+                                    <div class="container">
+                                        <ul class="clean-list">
+                                            <li class="sub tab-link program-tab-link sub-active" data-c="time-1">
+                                                <div class="tab-link-control ">
+                                                    <span class="date">4月25日</span>
+                                                </div>
+                                            </li>
+                                            <li class="sub tab-link program-tab-link" data-c="time-2">
+                                                <div class="tab-link-control ">
+                                                    <span class="date">4月25日</span>
+                                                </div>
+                                            </li>
+                            
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="program-tab " data-d="time-1">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-md-3 col-sm-4 col-xs-6">
+                                                <div class="program-box">
+                                                    <div class="program-img">
+                                                        <img src="img/program-1.jpg">
+                                                    </div>
+                            
+                                                    <div class="program-box-text">
+                                                        <span class="timming">
+                                                            <i class="iconfont">&#xe6b5;</i>8:00 - 11:00</span>
+                                                        <h5 class="title">智能机器人发布会</h5>
+                            
+                                                        <p class="description">2016年4月10日，鑫益嘉旗下巴巴腾首款儿童智能陪护机器人——“小腾”在宝立方博览中心震撼发布，本次发布会主题为“科技无限，智在未来”。</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3 col-sm-4 col-xs-6">
+                                                <div class="program-box">
+                                                    <div class="program-img">
+                                                        <img src="img/program-1.jpg">
+                                                    </div>
+                            
+                                                    <div class="program-box-text">
+                                                        <span class="timming">
+                                                            <i class="iconfont">&#xe6b5;</i>8:00 - 11:00</span>
+                                                        <h5 class="title">智能机器人发布会</h5>
+                            
+                                                        <p class="description">2016年4月10日，鑫益嘉旗下巴巴腾首款儿童智能陪护机器人——“小腾”在宝立方博览中心震撼发布，本次发布会主题为“科技无限，智在未来”。</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3 col-sm-4 col-xs-6">
+                                                <div class="program-box">
+                                                    <div class="program-img">
+                                                        <img src="img/program-1.jpg">
+                                                    </div>
+                            
+                                                    <div class="program-box-text">
+                                                        <span class="timming">
+                                                            <i class="iconfont">&#xe6b5;</i>8:00 - 11:00</span>
+                                                        <h5 class="title">智能机器人发布会</h5>
+                            
+                                                        <p class="description">2016年4月10日，鑫益嘉旗下巴巴腾首款儿童智能陪护机器人——“小腾”在宝立方博览中心震撼发布，本次发布会主题为“科技无限，智在未来”。</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3 col-sm-4 col-xs-6">
+                                                <div class="program-box">
+                                                    <div class="program-img">
+                                                        <img src="img/program-1.jpg">
+                                                    </div>
+                            
+                                                    <div class="program-box-text">
+                                                        <span class="timming">
+                                                            <i class="iconfont">&#xe6b5;</i>8:00 - 11:00</span>
+                                                        <h5 class="title">智能机器人发布会</h5>
+                            
+                                                        <p class="description">2016年4月10日，鑫益嘉旗下巴巴腾首款儿童智能陪护机器人——“小腾”在宝立方博览中心震撼发布，本次发布会主题为“科技无限，智在未来”。</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="program-tab " data-d="time-2">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-md-3 col-sm-4 col-xs-6">
+                                                <div class="program-box">
+                                                    <div class="program-img">
+                                                        <img src="img/program-1.jpg">
+                                                    </div>
+                                
+                                                    <div class="program-box-text">
+                                                        <span class="timming">
+                                                            <i class="iconfont">&#xe6b5;</i>8:00 - 11:00</span>
+                                                        <h5 class="title">智能机器人发布会</h5>
+                                
+                                                        <p class="description">2016年4月10日，鑫益嘉旗下巴巴腾首款儿童智能陪护机器人——“小腾”在宝立方博览中心震撼发布，本次发布会主题为“科技无限，智在未来”。</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3 col-sm-4 col-xs-6">
+                                                <div class="program-box">
+                                                    <div class="program-img">
+                                                        <img src="img/program-1.jpg">
+                                                    </div>
+                                
+                                                    <div class="program-box-text">
+                                                        <span class="timming">
+                                                            <i class="iconfont">&#xe6b5;</i>8:00 - 11:00</span>
+                                                        <h5 class="title">智能机器人发布会</h5>
+                                
+                                                        <p class="description">2016年4月10日，鑫益嘉旗下巴巴腾首款儿童智能陪护机器人——“小腾”在宝立方博览中心震撼发布，本次发布会主题为“科技无限，智在未来”。</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3 col-sm-4 col-xs-6">
+                                                <div class="program-box">
+                                                    <div class="program-img">
+                                                        <img src="img/program-1.jpg">
+                                                    </div>
+                                
+                                                    <div class="program-box-text">
+                                                        <span class="timming">
+                                                            <i class="iconfont">&#xe6b5;</i>8:00 - 11:00</span>
+                                                        <h5 class="title">智能机器人发布会</h5>
+                                
+                                                        <p class="description">2016年4月10日，鑫益嘉旗下巴巴腾首款儿童智能陪护机器人——“小腾”在宝立方博览中心震撼发布，本次发布会主题为“科技无限，智在未来”。</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3 col-sm-4 col-xs-6">
+                                                <div class="program-box">
+                                                    <div class="program-img">
+                                                        <img src="img/program-1.jpg">
+                                                    </div>
+                                
+                                                    <div class="program-box-text">
+                                                        <span class="timming">
+                                                            <i class="iconfont">&#xe6b5;</i>8:00 - 11:00</span>
+                                                        <h5 class="title">智能机器人发布会</h5>
+                                
+                                                        <p class="description">2016年4月10日，鑫益嘉旗下巴巴腾首款儿童智能陪护机器人——“小腾”在宝立方博览中心震撼发布，本次发布会主题为“科技无限，智在未来”。</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!--  Speakers Section-->
+            <section class="section section-speaker" id="speaker">
+                <div class="section-header">
+                    <h2 class="text-center">嘉宾</h2>
+                </div>
+            
+                <div class="container">
+                    <div class="speaker-tabs">
+                        <div class="tabed-content">
+                            <div class="row row-fit">
+                                <!-- 左边图片 -->
+                                <div class="col-md-6">
+                                    <div class="tabs-header">
+                                        <ul class="clean-list">
+                                            <li class="tab-link speaker-tab-link" data-tab-link="1">
+                                                <div class="speaker-box">
+                                                    <img src="img/speaker-1.jpg" alt="speaker image">
+                                                    <i class="chgBorderColor chgGrColor5"></i>
+                                                </div>
+                                            </li>
+                                            <li class="tab-link speaker-tab-link current" data-tab-link="2">
+                                                <div class="speaker-box">
+                                                    <img src="img/speaker-2.jpg" alt="speaker image">
+                                                    <i class="chgBorderColor chgGrColor5"></i>
+                                                </div>
+                                            </li>
+                                            <li class="tab-link speaker-tab-link" data-tab-link="3">
+                                                <div class="speaker-box">
+                                                    <img src="img/speaker-3.jpg" alt="speaker image">
+                                                    <i class="chgBorderColor chgGrColor5"></i>
+                                                </div>
+                                            </li>
+                                            <li class="tab-link speaker-tab-link" data-tab-link="4">
+                                                <div class="speaker-box">
+                                                    <img src="img/speaker-4.jpg" alt="speaker image">
+                                                    <i class="chgBorderColor chgGrColor5"></i>
+                                                </div>
+                                            </li>
+                                            <li class="tab-link speaker-tab-link" data-tab-link="5">
+                                                <div class="speaker-box">
+                                                    <img src="img/speaker-5.jpg" alt="speaker image">
+                                                    <i class="chgBorderColor chgGrColor5"></i>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <!-- 右边简介 -->
+                                <div class="col-md-6">
+                                    <div class="t-body">
+                                        <div class="hidden speaker-tab" data-tab="1">
+                                            <div class="speaker-info-box">
+                                                <h3 class="theme-title">Engage network equity equal opportunity</h3>
+            
+                                                <div class="event-meta">
+                                                    <div class="speaker-info">
+                                                        <img src="img/speaker-1.jpg" alt="speaker image">
+                                                        <span class="name chgFtColor">
+                                                            约翰逊
+                                                        </span>
+                                                    </div>
+                                                    <span class="date">on 1409.2016</span>
+                                                </div>
+            
+                                                <p class="theme-description">
+                                                    担任过清华大学数字图书馆研究所顾问, 《数字图书馆论坛》编辑部顾问，浙江大学信息资源管理研究所兼职研究员，北京师范大学图书馆数字图书馆研究所顾问，上海交通大学和江苏大学客座研究员。目前担任中图学会图书馆建筑和设备专业委员会委员，和深圳图书情报学会常务理事。
+                                                    承担过的咨询项目有Sirsi公司中国项目，Exlibris公司中国项目，新加坡国家图书馆局多语种系统项目，中国国家图书馆，北京大学和北京师范大学图书馆自动化系统选型项目等。
+                                                </p>
+            
+                                                <div class="social-block-wrapper">
+                                                    <ul class="clean-list social-block">
+                                                        <li>
+                                                            <a href="#">
+                                                                <i class="icon-facebook"></i>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">
+                                                                <i class="icon-facebook"></i>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">
+                                                                <i class="icon-facebook"></i>
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+            
+                                        <div class="speaker-tab currentTab" data-tab="2">
+                                            <div class="speaker-info-box">
+                                                <h3 class="theme-title">Engage network equity equal opportunity</h3>
+            
+                                                <div class="event-meta">
+                                                    <div class="speaker-info">
+                                                        <img src="img/speaker-2.jpg" alt="speaker image">
+                                                        <span class="name chgFtColor">
+                                                            乔纳森
+                                                        </span>
+                                                    </div>
+                                                    <span class="date">on 1409.2016</span>
+                                                </div>
+            
+                                                <p class="theme-description">
+                                                    北京大学图书馆学系学士，美国宾夕法尼亚州可莱仁大学图书情报学院硕士，加州大学伯克利分校信息管理学院博士课程。 香港中文大学（深圳）图书馆馆长，曾任上海科技大学图书信息中心主任（2013-15），之前在美国霍普金斯大学，斯坦福大学，Dialog
+                                                    等机构组织工作近30年。 长期从事信息技术和图书馆自动化的开发，研究和管理工作。曾参加国内第一代大学图书馆自动化系统的研发，并为国内几家主要图书馆提供系统选择的建议。自1994年以来，定期组织国外学者回国讲学交流。2004年参与发起并组织第一届数字图书馆前沿问题高级研讨班，延续至今。
+                                                </p>
+            
+                                                <div class="social-block-wrapper">
+                                                    <ul class="clean-list social-block">
+                                                        <li>
+                                                            <a href="#">
+                                                                <i class="icon-facebook"></i>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">
+                                                                <i class="icon-facebook"></i>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">
+                                                                <i class="icon-facebook"></i>
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+            
+                                        <div class="hidden speaker-tab" data-tab="3">
+                                            <div class="speaker-info-box">
+                                                <h3 class="theme-title">Engage network equity equal opportunity</h3>
+            
+                                                <div class="event-meta">
+                                                    <div class="speaker-info">
+                                                        <img src="img/speaker-3.jpg" alt="speaker image">
+                                                        <span class="name chgFtColor">
+                                                            克里斯·约翰逊
+                                                        </span>
+                                                    </div>
+                                                    <span class="date">on 1409.2016</span>
+                                                </div>
+            
+                                                <p class="theme-description">
+                                                    陈力军教授是南京大学计算机科学与技术系、南京大学计算机软件新技术国家重点实验室教授，博士生导师，江苏省物联网测试与验证技术中心主任、江苏省计算机学会网络与分布计算专业委员会副主任委员。主要研究领域为泛在网络技术。陈力军教授在IEEE Transactions
+                                                    on Mobile Computing和INFOCOM等国际一流学术期刊和一流学术会议上发表相关论文60余篇。
+                                                </p>
+            
+                                                <div class="social-block-wrapper">
+                                                    <ul class="clean-list social-block">
+                                                        <li>
+                                                            <a href="#">
+                                                                <i class="icon-facebook"></i>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">
+                                                                <i class="icon-facebook"></i>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">
+                                                                <i class="icon-facebook"></i>
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+            
+                                        <div class="hidden speaker-tab" data-tab="4">
+                                            <div class="speaker-info-box">
+                                                <h3 class="theme-title">Engage network equity equal opportunity</h3>
+            
+                                                <div class="event-meta">
+                                                    <div class="speaker-info">
+                                                        <img src="img/speaker-4.jpg" alt="speaker image">
+                                                        <span class="name chgFtColor">
+                                                            克里斯
+                                                        </span>
+                                                    </div>
+                                                    <span class="date">on 1409.2016</span>
+                                                </div>
+            
+                                                <p class="theme-description">
+                                                    浙江大学CADAL管理中心副主任。浙江大学图书馆副馆长，研究馆员。同济大学工民建专业毕业，浙江大学历史学硕士。2009年起任浙江大学图书馆副馆长，兼任“高等学校中美图书国际合作数字化计划（CADAL）”项目管理中心秘书长、副主任；中图学会数字图书馆分委会委员等
+                                                    。主要致力于数字图书馆规划与建设，主持和参与国家“863”计划、“科技支撑计划”、自然科学基金等项目多项，获浙江省科技进步一等奖一项，软件著作权6项；发表专著两部，学术论文30余篇。
+                                                </p>
+            
+                                                <div class="social-block-wrapper">
+                                                    <ul class="clean-list social-block">
+                                                        <li>
+                                                            <a href="#">
+                                                                <i class="icon-facebook"></i>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">
+                                                                <i class="icon-facebook"></i>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">
+                                                                <i class="icon-facebook"></i>
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+            
+                                        <div class="hidden speaker-tab" data-tab="5">
+                                            <div class="speaker-info-box">
+                                                <h3 class="theme-title">Engage network equity equal opportunity</h3>
+            
+                                                <div class="event-meta">
+                                                    <div class="speaker-info">
+                                                        <img src="img/speaker-5.jpg" alt="speaker image">
+                                                        <span class="name chgFtColor">
+                                                            陈力军
+                                                        </span>
+                                                    </div>
+                                                    <span class="date">on 1409.2016</span>
+                                                </div>
+            
+                                                <p class="theme-description">
+                                                    上海交大继续教育学院客座教授，北京国家会计学院首席风险官培养工程主讲教授，慧科教育集团互联网金融专业委员会委员，北航兼职硕士生导师，香港商报金融研究中心银行透明度评委。多次为北京航空航天大学以及武汉大学、南京大学、对外经贸大学互联网金融硕士班、山东女子学院金融工程专业本科生开设《互联网金融导论》、《金融学》课程。
+                                                </p>
+            
+                                                <div class="social-block-wrapper">
+                                                    <ul class="clean-list social-block">
+                                                        <li>
+                                                            <a href="#">
+                                                                <i class="icon-facebook"></i>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">
+                                                                <i class="icon-facebook"></i>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">
+                                                                <i class="icon-facebook"></i>
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+            
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 新闻 -->
+            <div class="m-content-wrapper" id="news">
+                <div class="container news">
+                    <div class="news-header">
+                        <h2>新闻</h2>
+                    </div>
+            
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                            <div class="news-content">
+                                <h3 class="news-title">化院本科生获“挑战杯”特等奖</h3>
+                                <h4 class="news-date">2017-5-6</h4>
+                                <p class="news-text">5月25日，学习交流团前往浙江大学化学实验教学中心参观交流。交流会由浙江大学基础化学实验教学中心主任王敏教授主持，书记雷鸣、副主任赵华绒、曾秀琼和王国平，以及实验课程负责人等19位教师与学习交流团10位成员进行交流研讨。双方分别介绍化学实验教学中心总体情况、近些年的实践教学改革思路，双方教师就实验课程设置、教学内容、分层次教学情况、实验师资队伍（特别是青年实验技术队伍）、研究生助教、实验室安全管理、安全文化建设、工作中面临的共同难点等主题进行广泛深入交流。随后学习交流团成员深入浙江大学化学实验教学中心实验室进行调研，并围绕实验室建设细节展开讨论。此次交流取得良好成效，促进了两校化学实验教学中心的相互了解，也为开展工作拓宽了思路。通过一整天的交流，双方受益匪浅，双方约定今后将进一步加强双边交流，适时开展实验教学研讨，为建设化学国家级实验教学示范中心协同努力。
+                                </p>
+                                <a class="read-more" data-toggle="modal" data-target="#myModal">READ MORE</a>
+                            </div>
+                            <!-- Modal -->
+                            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                            <h4 class="modal-title" id="myModalLabel">化院本科生获“挑战杯”特等奖</h4>
+                                        </div>
+                                        <div class="modal-body">
+                                            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5月25日，学习交流团前往浙江大学化学实验教学中心参观交流。交流会由浙江大学基础化学实验教学中心主任王敏教授主持，书记雷鸣、副主任赵华绒、曾秀琼和王国平，以及实验课程负责人等19位教师与学习交流团10位成员进行交流研讨。双方分别介绍化学实验教学中心总体情况、近些年的实践教学改革思路，双方教师就实验课程设置、教学内容、分层次教学情况、实验师资队伍（特别是青年实验技术队伍）、研究生助教、实验室安全管理、安全文化建设、工作中面临的共同难点等主题进行广泛深入交流。随后学习交流团成员深入浙江大学化学实验教学中心实验室进行调研，并围绕实验室建设细节展开讨论。此次交流取得良好成效，促进了两校化学实验教学中心的相互了解，也为开展工作拓宽了思路。通过一整天的交流，双方受益匪浅，双方约定今后将进一步加强双边交流，适时开展实验教学研讨，为建设化学国家级实验教学示范中心协同努力。
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                            <div class="news-content">
+                                <h3 class="news-title">化院学子获第十届中国青少年科技创新奖</h3>
+                                <h4 class="news-date">2017-5-6</h4>
+                                <p class="news-text">5月25日，学习交流团前往浙江大学化学实验教学中心参观交流。交流会由浙江大学基础化学实验教学中心主任王敏教授主持，书记雷鸣、副主任赵华绒、曾秀琼和王国平，以及实验课程负责人等19位教师与学习交流团10位成员进行交流研讨。双方分别介绍化学实验教学中心总体情况、近些年的实践教学改革思路，双方教师就实验课程设置、教学内容、分层次教学情况、实验师资队伍（特别是青年实验技术队伍）、研究生助教、实验室安全管理、安全文化建设、工作中面临的共同难点等主题进行广泛深入交流。随后学习交流团成员深入浙江大学化学实验教学中心实验室进行调研，并围绕实验室建设细节展开讨论。此次交流取得良好成效，促进了两校化学实验教学中心的相互了解，也为开展工作拓宽了思路。通过一整天的交流，双方受益匪浅，双方约定今后将进一步加强双边交流，适时开展实验教学研讨，为建设化学国家级实验教学示范中心协同努力。
+                                </p>
+                                <a class="read-more" data-toggle="modal" data-target="#myModal">READ MORE</a>
+                            </div>
+                            <!-- Modal -->
+                            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                            <h4 class="modal-title" id="myModalLabel">化院学子获第十届中国青少年科技创新奖</h4>
+                                        </div>
+                                        <div class="modal-body">
+                                            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5月25日，学习交流团前往浙江大学化学实验教学中心参观交流。交流会由浙江大学基础化学实验教学中心主任王敏教授主持，书记雷鸣、副主任赵华绒、曾秀琼和王国平，以及实验课程负责人等19位教师与学习交流团10位成员进行交流研讨。双方分别介绍化学实验教学中心总体情况、近些年的实践教学改革思路，双方教师就实验课程设置、教学内容、分层次教学情况、实验师资队伍（特别是青年实验技术队伍）、研究生助教、实验室安全管理、安全文化建设、工作中面临的共同难点等主题进行广泛深入交流。随后学习交流团成员深入浙江大学化学实验教学中心实验室进行调研，并围绕实验室建设细节展开讨论。此次交流取得良好成效，促进了两校化学实验教学中心的相互了解，也为开展工作拓宽了思路。通过一整天的交流，双方受益匪浅，双方约定今后将进一步加强双边交流，适时开展实验教学研讨，为建设化学国家级实验教学示范中心协同努力。
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                            <div class="news-content">
+                                <h3 class="news-title">南京大学化学化工学院学生团队荣获全国“互联网+”最佳创新奖</h3>
+                                <h4 class="news-date">2017-5-6</h4>
+                                <p class="news-text">5月25日，学习交流团前往浙江大学化学实验教学中心参观交流。交流会由浙江大学基础化学实验教学中心主任王敏教授主持，书记雷鸣、副主任赵华绒、曾秀琼和王国平，以及实验课程负责人等19位教师与学习交流团10位成员进行交流研讨。双方分别介绍化学实验教学中心总体情况、近些年的实践教学改革思路，双方教师就实验课程设置、教学内容、分层次教学情况、实验师资队伍（特别是青年实验技术队伍）、研究生助教、实验室安全管理、安全文化建设、工作中面临的共同难点等主题进行广泛深入交流。随后学习交流团成员深入浙江大学化学实验教学中心实验室进行调研，并围绕实验室建设细节展开讨论。此次交流取得良好成效，促进了两校化学实验教学中心的相互了解，也为开展工作拓宽了思路。通过一整天的交流，双方受益匪浅，双方约定今后将进一步加强双边交流，适时开展实验教学研讨，为建设化学国家级实验教学示范中心协同努力。
+                                </p>
+                                <a class="read-more" data-toggle="modal" data-target="#myModal">READ MORE</a>
+                            </div>
+                            <!-- Modal -->
+                            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                            <h4 class="modal-title" id="myModalLabel">南京大学化学化工学院学生团队荣获全国“互联网+”最佳创新奖</h4>
+                                        </div>
+                                        <div class="modal-body">
+                                            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5月25日，学习交流团前往浙江大学化学实验教学中心参观交流。交流会由浙江大学基础化学实验教学中心主任王敏教授主持，书记雷鸣、副主任赵华绒、曾秀琼和王国平，以及实验课程负责人等19位教师与学习交流团10位成员进行交流研讨。双方分别介绍化学实验教学中心总体情况、近些年的实践教学改革思路，双方教师就实验课程设置、教学内容、分层次教学情况、实验师资队伍（特别是青年实验技术队伍）、研究生助教、实验室安全管理、安全文化建设、工作中面临的共同难点等主题进行广泛深入交流。随后学习交流团成员深入浙江大学化学实验教学中心实验室进行调研，并围绕实验室建设细节展开讨论。此次交流取得良好成效，促进了两校化学实验教学中心的相互了解，也为开展工作拓宽了思路。通过一整天的交流，双方受益匪浅，双方约定今后将进一步加强双边交流，适时开展实验教学研讨，为建设化学国家级实验教学示范中心协同努力。
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            
+            
+                </div>
+            </div>
+
+            <!-- Sponsors Section -->
+            <section class="section section-sponsors" id="sponsor">
+                <div class="section-header">
+                    <h2 class="text-center">赞助商</h2>
+                </div>
+
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-4 col-xs-6">
+                            <div class="sponsor-block">
+                                <img src="img/logo-1.jpg" alt="sponsor image">
+                            </div>
+                            <span class="sponsor-name">南京大学</span>
+                        </div>
+                        <div class="col-md-4 col-xs-6">
+                            <div class="sponsor-block">
+                                <img src="img/logo-2.jpg" alt="sponsor image">
+                            </div>
+                            <span class="sponsor-name">东南大学</span>
+                        </div>
+                        <div class="col-md-4 col-xs-6">
+                            <div class="sponsor-block">
+                                <img src="img/logo-3.jpg" alt="sponsor image">
+                            </div>
+                            <span class="sponsor-name">TBS</span>
+                        </div>
+                        <div class="col-md-4 col-xs-6">
+                            <div class="sponsor-block">
+                                <img src="img/logo-4.jpg" alt="sponsor image">
+                            </div>
+                            <span class="sponsor-name">UDS</span>
+                        </div>
+                        <div class="col-md-4 col-xs-6">
+                            <div class="sponsor-block">
+                                <img src="img/logo-1.jpg" alt="sponsor image">
+                            </div>
+                            <span class="sponsor-name">南京大学</span>
+                        </div>
+                        <div class="col-md-4 col-xs-6">
+                            <div class="sponsor-block">
+                                <img src="img/logo-2.jpg" alt="sponsor image">
+                            </div>
+                            <span class="sponsor-name">东南大学</span>
+                        </div>
+
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- map -->
+            <div  id='allmap' style='height: 400px;'></div>
+            <!-- <script src='https://api.map.baidu.com/api?v=2.0&amp;ak=2i40RObup2gf1DxMMXPyNYDjAkETWgVt' type='text/javascript'></script>
+            <script src='https://api.map.baidu.com/library/SearchInfoWindow/1.5/src/SearchInfoWindow_min.js' type='text/javascript'></script>
+            <link href='https://api.map.baidu.com/library/SearchInfoWindow/1.5/src/SearchInfoWindow_min.css' rel='stylesheet'>
+             -->
+            <script>
+                $(document).ready(function() {
+                    var map = new BMap.Map("allmap");            // 创建Map实例
+                    map.setCurrentCity("南京");
+                    map.centerAndZoom(new BMap.Point("118.9488359559", "32.1310197250"), 11);
+                    var marker = new BMap.Marker(new BMap.Point( "118.9488359559" , "32.1310197250"));
+                    map.addOverlay(marker);
+                    var venue_name = "南京信息职业技术学院";
+                    var venue_street = "文澜路99号";
+                    var licontent = "<b>" + venue_name + "</b><br>";
+                    licontent += "<span><strong>地址：</strong>" + venue_street  + "</span><br>";
+                    licontent += "<span class=\"input\"><strong>起点：</strong><input style=\"width:80%;\" class=\"outset\" type=\"text\" name=\"origin\" value=\"\"/><br><br><input class=\"outset-but pull-left\" type=\"button\" value=\"公交\" onclick=\"gotobaidu(1)\" /><input class=\"outset-but pull-left\" type=\"button\" value=\"驾车\" onclick=\"gotobaidu(2)\"/><a class=\"gotob\" href=\"url=\"http://api.map.baidu.com/direction?destination=latlng:"+marker.getPosition().lat+","+marker.getPosition().lng+"|name:"+"®ion="+"&output=html\" target=\"_blank\"></a></span>";
+                    var hiddeninput="<input type=\"hidden\" value=\""+'<%= venue.city %>'+"\" name=\"region\" /><input type=\"hidden\" value=\"html\" name=\"output\" /><input type=\"hidden\" value=\"driving\" name=\"mode\" /><input type=\"hidden\" value=\"latlng:"+marker.getPosition().lat+","+marker.getPosition().lng+"|name:"+"\" name=\"destination\" />";
+                    var content1 ="<form id=\"gotobaiduform\" action=\"http://api.map.baidu.com/direction\" target=\"_blank\" method=\"get\">" + licontent +hiddeninput+"</form>";
+                    var opts1 = { width: 300 };
+                    var  infoWindow = new BMap.InfoWindow(content1, opts1);
+                    marker.openInfoWindow(infoWindow);
+                    marker.addEventListener('click',function(){
+                        marker.openInfoWindow(infoWindow);
+                    });
+                    gotobaidu = function(type) {
+                        if($.trim($("input[name=origin]").val())=="")
+                        {
+                            alert("请输入起点！");
+                            return;
+                        }else{
+                            if(type==1)
+                            {
+                                $("input[name=mode]").val("transit");
+                                $("#gotobaiduform")[0].submit();
+                            }else if(type==2)
+                            {
+                                $("input[name=mode]").val("driving");
+                                $("#gotobaiduform")[0].submit();
+                            }
+                        }
+                    }
+                })
+            </script>
+        </div>
+
+        <!-- Main Footer Area -->
+        <footer class="main-footer">
+            <div class="main-footer-area">
+                
+                <div class="copyright-wrapper">
+                    <div class="copyright-content">
+                        <p class="copyrights">Copyright © MeetConf - All Rights Reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <div id="toTop" class="toTopButton">
+        <i class="iconfont top-icon">&#xe62c;</i>
+    </div>
+
+
+</body>
+</html>
